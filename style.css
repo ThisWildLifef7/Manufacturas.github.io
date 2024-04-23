@@ -10,18 +10,33 @@ html {
 }
 
 .header {
-    display: flex;
     border: 2px solid black;
+    display: grid;
+    place-items: center;
+}
+
+.head-nav {
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    width: 50rem;
 }
 
 .card-logo {
     border: 2px solid red;
 }
-
-.right-nav {
-    border: 2px solid red;
+.options-head {
+    width: 40rem;
+    display: flex;
+    border: 2px solid green;
 }
+
 
 img {
     width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

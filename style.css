@@ -5,9 +5,9 @@
     list-style: none;
 }
 
-html {
+/* html {
     font-size: 62.5;
-}
+} */
 
 .header {
     border: 2px solid black;
@@ -16,21 +16,28 @@ html {
 }
 
 .head-nav {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
     width: 50rem;
 }
 
 .card-logo {
-    border: 2px solid red;
+    width: 10rem;
+    /* border: 2px solid red; */
 }
 .options-head {
-    width: 40rem;
+    width: 37rem;
     display: flex;
-    border: 2px solid green;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Roboto";
+    /* border: 2px solid green; */
 }
 
+a:hover {
+    color: blue;
+}
 
 img {
     width: 100%;

@@ -10,13 +10,36 @@
 } */
 
 .header {
-    border: 2px solid black;
+    border: 2px solid yellow;
     display: grid;
     place-items: center;
+    height: 5.2rem;
+}
+/* Primer nav */
+.nav-left {
+    border: 2px solid green;
+    width: 50rem;
+    height: 2.5rem;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F2F3F;
+}
+.op-found {
+    display: flex;
+    justify-content: space-between;
+    width: 37rem;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
 }
 
-.head-nav {
-    /* border: 2px solid red; */
+.fa-solid, .fa-regular {
+    margin-right: 6px;
+}
+
+/* Segundo nav */
+.nav-right {
     display: flex;
     justify-content: space-between;
     width: 50rem;
@@ -34,9 +57,16 @@
     font-family: "Roboto";
     /* border: 2px solid green; */
 }
+.fa-chevron-down {
+    margin-left: 5px;
+    transition: all 0.5s ease-out;
+}
 
 a:hover {
     color: blue;
+}
+.fa-chevron-down:hover {
+    transform: rotateY(-360deg);
 }
 
 img {
@@ -45,5 +75,4 @@ img {
 
 a {
     text-decoration: none;
-    color: black;
 }

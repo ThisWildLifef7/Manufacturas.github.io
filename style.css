@@ -10,21 +10,29 @@
 } */
 
 .header {
-    border: 2px solid yellow;
+    border: 2px solid green;
     display: grid;
     place-items: center;
-    height: 5.2rem;
+    height: 6.2rem;
 }
 /* Primer nav */
+
+.box-left {
+    border: 2px solid yellow;
+    width: 100%;
+    display: grid;
+    background-color: #1F2F3F;
+    place-content: center;
+}
+
 .nav-left {
-    border: 2px solid green;
+    border: 2px solid red;
     width: 50rem;
     height: 2.5rem;
     display: flex;
     color: white;
     justify-content: space-between;
     align-items: center;
-    background-color: #1F2F3F;
 }
 .op-found {
     display: flex;
@@ -43,6 +51,7 @@
     display: flex;
     justify-content: space-between;
     width: 50rem;
+    border: 2px solid blue;
 }
 
 .card-logo {

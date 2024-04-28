@@ -26,7 +26,7 @@
 }
 
 .nav-left {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 50rem;
     height: 2.5rem;
     display: flex;

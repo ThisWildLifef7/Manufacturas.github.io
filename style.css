@@ -75,6 +75,9 @@
     align-items: center;
     font-family: "Roboto";
 }
+.options-head a {
+    color: black;
+}
 .fa-chevron-down {
     margin-left: 5px;
     transition: all 0.5s ease-out;
@@ -120,6 +123,14 @@
 
 .fa-circle-play {
     margin-right: 5px;
+}
+
+.card-info {
+    display: flex;
+}
+
+.card {
+    border: 2px solid skyblue;
 }
 
 /* @keyframes slide {

@@ -86,14 +86,40 @@
 
 /* Bloque main */
 
+.main {
+    border: 2px solid yellow;
+    display: grid;
+    place-items: center;
+}
+
 .card-fond {
     width: 50rem;
 }
 .slider-box {
     display: flex;
-    padding: 0;
-    width: 400%;
     animation: slide 20s infinite alternate ease-in-out;
+}
+
+.first-part {
+    border: 2px solid red;
+    width: 57rem;
+    overflow: hidden;
+}
+
+.descrip-left {
+    border: 2px solid green;
+    width: 20rem;
+}
+.descrip-right {
+    border: 2px solid blue;
+    width: 20rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.fa-circle-play {
+    margin-right: 5px;
 }
 
 /* @keyframes slide {

@@ -95,34 +95,57 @@
     place-items: center;
 }
 
-.card-fond {
-    width: 50rem;
-}
-.slider-box {
-    display: flex;
-    animation: slide 20s infinite alternate ease-in-out;
-}
+/* .first-part{
+    background-image: url(./pics/fond-textil.jpg);
+} */
 
-.first-part {
+.one-box {
     border: 2px solid red;
     width: 57rem;
-    overflow: hidden;
+}
+.descrip-left {
+    /* border: 2px solid green; */
+    width: 30rem;
+    height: 18em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.descrip-left h2 {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+}
+.descrip-left h1 {
+    font-size: 40px;
+    font-family: "Ubuntu Sans";
+}
+.p-one {
+    font-family: 'Roboto';
+    font-size: 13px;
 }
 
-.descrip-left {
-    border: 2px solid green;
-    width: 20rem;
-}
 .descrip-right {
     border: 2px solid blue;
     width: 20rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+.initial-button {
+    background-color: #B3CC55;
     padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    cursor: pointer;
 }
 
 .fa-circle-play {
     margin-right: 5px;
+    font-size: 33px;
 }
 
 .card-info {
@@ -133,21 +156,9 @@
     border: 2px solid skyblue;
 }
 
-/* @keyframes slide {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
-} */
-
-
+.options-head a:hover {
+    color: #7AA93C;
+}
 
 
 img {

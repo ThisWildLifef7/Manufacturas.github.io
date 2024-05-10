@@ -1,3 +1,8 @@
+:root {
+    --main-color: #1F2F3F;
+    --main-two-color: #7AA93C;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +15,7 @@
 } */
 
 .header {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: grid;
     place-items: center;
 }
@@ -20,7 +25,7 @@
     width: 100%;
     padding: 10px;
     display: grid;
-    background-color: #1F2F3F;
+    background-color: var(--main-color);
     place-content: center;
 }
 
@@ -42,7 +47,7 @@
 .social-details a{
     font-size: 15px;
     color: white;
-    background-color: #B3CC55;
+    background-color: var(--main-two-color);
     border-radius: 50%;
     padding: 8px;
 }
@@ -88,28 +93,39 @@
 }
 
 /* Bloque main */
-
 .main {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     display: grid;
     place-items: center;
 }
 
-/* .first-part{
-    background-image: url(./pics/fond-textil.jpg);
-} */
+.first-part{
+    background-image: linear-gradient(rgba(4, 5, 9, 0.3),
+    rgba(4, 5, 9, 0.4)), url(./pics/fond-textil.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 35em;
+    display: grid;
+    place-items: center;
+    /* border: 2px solid yellow; */
+}
 
 .one-box {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 57rem;
+    position: relative;
 }
 .descrip-left {
     /* border: 2px solid green; */
     width: 30rem;
     height: 18em;
     display: flex;
+    color: white;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-bottom: 20px;
 }
 .descrip-left h2 {
     font-family: 'Roboto';
@@ -117,7 +133,7 @@
     font-weight: 400;
 }
 .descrip-left h1 {
-    font-size: 40px;
+    font-size: 3.4em;
     font-family: "Ubuntu Sans";
 }
 .p-one {
@@ -126,38 +142,59 @@
 }
 
 .descrip-right {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 20rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-right: 10px;
+    margin-bottom: 40px;
 }
 .initial-button {
-    background-color: #B3CC55;
+    background-color: var(--main-two-color);
     padding: 15px;
     border: 0;
     border-radius: 5px;
     font-weight: bold;
     font-family: 'Segoe UI';
     cursor: pointer;
-}
-
-.fa-circle-play {
-    margin-right: 5px;
-    font-size: 33px;
+    color: white;
 }
 
 .card-info {
+    width: 70em;
+    position: absolute;
+    right: -100px;
     display: flex;
+    justify-content: space-evenly;
+    /* border: 2px solid yellow; */
 }
-
 .card {
-    border: 2px solid skyblue;
+    width: 20em;
+    height: 10em;
+    background-color: var(--main-color);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+.card .fa-solid {
+    font-size: 25px;
+    color: var(--main-two-color);
+}
+.front-text {
+    /* border: 2px solid white; */
+    font-size: 15px;
+    display: flex;
+    width: 15em;
+    height: 5em;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .options-head a:hover {
-    color: #7AA93C;
+    color: var(--main-two-color);
 }
 
 

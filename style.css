@@ -266,26 +266,39 @@
 }
 .descrip-up p {
     text-align: justify;
-    font-size: 15px;
+    font-size: 13px;
+    font-family: Helvetica;
+    color: #757575;
 }
 
 .descrip-down {
     display: flex;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 .my {
     width: 50%;
     padding: 0px 15px;
+}
+.my h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: 'Roboto';
+    color: var(--main-color);
 }
 .vision {
     border-right: 1px solid var(--main-two-color);
 }
 .info-ame {
     display: flex;
-    border: 2px solid black;
     justify-content: space-evenly;
+    font-family: Helvetica;
+    font-size: 13px;
+    color: #757575;
 }
-
+.fa-circle-check {
+    margin-right: 10px;
+    color: var(--main-two-color);
+}
 
 
 .options-head a:hover {

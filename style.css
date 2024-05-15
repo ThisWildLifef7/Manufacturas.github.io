@@ -222,16 +222,19 @@
     border-radius: 10px;
     overflow: hidden;
 }
+
 .phto1 {
     top: 315px;
     left: 5px;
     width: 14em;
+    height: 10em;
     z-index: 3;
 }
 .phto2 {
     top: 6px;
     right: 50px;
-    width: 17em;    
+    width: 17em;
+    height: 25em;   
     z-index: 2;
 }
 .phto3 {
@@ -300,6 +303,53 @@
     color: var(--main-two-color);
 }
 
+/* three part */
+.three-part {
+    /* border: 2px solid red; */
+    background-image: linear-gradient(rgba(4, 5, 9, 0.2),
+    rgba(4, 5, 9, 0.3)), url(./pics/fond_4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 18em;
+    display: grid;
+    place-items: center;
+}
+.counter-info {
+    margin: 0 auto;
+    width: 57em;
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+.counter-info h1 {
+    /* border: 2px solid red; */
+    width: 6em;
+    font-size: 40px;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+.box-counter {
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 15px;
+    font-size: 19px;
+    font-family: Helvetica;
+}
+.box-counter
+.fa-plus {
+    color: var(--main-two-color);
+    position: absolute;
+    right: 45px;
+    top: 10px;
+}
 
 .options-head a:hover {
     color: var(--main-two-color);
@@ -307,6 +357,7 @@
 
 img {
     width: 100%;
+    height: 100%;
 }
 
 a {

@@ -24,12 +24,12 @@
     width: 100%;
     padding: 10px;
     display: grid;
+    margin-top: 62px;
     background-color: var(--main-color);
     place-content: center;
 }
 
 .nav-left {
-    /* border: 2px solid red; */
     width: 57rem;
     padding: 5px;
     display: flex;
@@ -62,8 +62,18 @@
 }
 
 /* Segundo nav */
+.box-rigth {
+    width: 100%;
+    /* border: 2px solid black; */
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 5;
+    box-shadow: 2px 2px var(--main-two-color);
+}
 .nav-right {
     display: flex;
+    margin: 0 auto;
     justify-content: space-between;
     width: 57rem;
     padding: 3px;
@@ -353,6 +363,7 @@
 
 .options-head a:hover {
     color: var(--main-two-color);
+    text-decoration: underline;
 }
 
 img {

@@ -10,9 +10,10 @@
     list-style: none;
 }
 
-/* html {
+html {
     font-size: 62.5;
-} */
+    scroll-behavior: smooth;
+}
 
 .header {
     display: grid;
@@ -20,7 +21,6 @@
 }
 /* Primer nav */
 .box-left {
-    /* border: 2px solid yellow; */
     width: 100%;
     padding: 10px;
     display: grid;
@@ -62,36 +62,50 @@
 }
 
 /* Segundo nav */
-.box-rigth {
+.box-right {
     width: 100%;
-    /* border: 2px solid black; */
+    height: 3.8em;
     position: fixed;
     top: 0;
     background-color: white;
     z-index: 5;
-    box-shadow: 2px 2px var(--main-two-color);
 }
 .nav-right {
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
     width: 57rem;
-    padding: 3px;
 }
 
 .card-logo {
     width: 12rem;
 }
 .options-head {
-    width: 37rem;
+    width: 42rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-family: "Roboto";
+    font-family: 'Poppins';
 }
 .options-head a {
     color: black;
+    position: relative;
+    padding: 0 9px;
+
+    transition: 0.3s;
 }
+.options-head a:after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-two-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+
+    transition: 0.3s;
+}
+
 .fa-chevron-down {
     margin-left: 5px;
     transition: all 0.5s ease-out;
@@ -103,7 +117,6 @@
 
 /* Bloque main */
 .main {
-    /* border: 2px solid yellow; */
     display: grid;
     place-items: center;
 }
@@ -119,16 +132,13 @@
     height: 35em;
     display: grid;
     place-items: center;
-    /* border: 2px solid black; */
 }
 
 .one-box {
-    /* border: 2px solid red; */
     width: 57rem;
     position: relative;
 }
 .descrip-left {
-    /* border: 2px solid green; */
     width: 30rem;
     height: 18em;
     display: flex;
@@ -152,7 +162,6 @@
 }
 
 .descrip-right {
-    /* border: 2px solid blue; */
     width: 20rem;
     display: flex;
     justify-content: space-between;
@@ -177,7 +186,6 @@
     right: -100px;
     display: flex;
     justify-content: space-evenly;
-    /* border: 2px solid yellow; */
 }
 .card {
     width: 20em;
@@ -205,7 +213,6 @@
 
 /* second body */
 .two-part {
-    /* border: 2px solid black; */
     display: grid;
     place-items: center;
     width: 57em;
@@ -214,12 +221,10 @@
 .two-box {
     display: flex;
     height: 30rem;
-    /* border: 2px solid red; */
 }
 
 .card-preview {
     width: 50%;
-    /* border: 2px solid green; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,7 +232,6 @@
     position: relative;
 }
 .box {
-    /* border: 2px solid red; */
     position: absolute;
     border-radius: 10px;
     overflow: hidden;
@@ -244,7 +248,7 @@
     top: 6px;
     right: 50px;
     width: 17em;
-    height: 25em;   
+    height: 25em;
     z-index: 2;
 }
 .phto3 {
@@ -254,7 +258,6 @@
 }
 
 .card-descrip {
-    /* border: 2px solid green; */
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -262,7 +265,6 @@
 }
 
 .descrip-up {
-    /* border: 2px solid black; */
     height: 13em;
     display: flex;
     flex-direction: column;
@@ -286,7 +288,6 @@
 
 .descrip-down {
     display: flex;
-    /* border: 2px solid black; */
 }
 .my {
     width: 50%;
@@ -315,7 +316,6 @@
 
 /* three part */
 .three-part {
-    /* border: 2px solid red; */
     background-image: linear-gradient(rgba(4, 5, 9, 0.2),
     rgba(4, 5, 9, 0.3)), url(./pics/fond_4.jpg);
     background-size: cover;
@@ -330,21 +330,18 @@
 .counter-info {
     margin: 0 auto;
     width: 57em;
-    /* border: 2px solid green; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     color: white;
 }
 .counter-info h1 {
-    /* border: 2px solid red; */
     width: 6em;
     font-size: 40px;
     font-family: 'Roboto';
     font-weight: 500;
 }
 .box-counter {
-    /* border: 2px solid blue; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -361,9 +358,12 @@
     top: 10px;
 }
 
-.options-head a:hover {
+.options-head a:hover,
+.options-head a.active {
     color: var(--main-two-color);
-    text-decoration: underline;
+}
+.options-head a:hover:after {
+    width: 100%;
 }
 
 img {

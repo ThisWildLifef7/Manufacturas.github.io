@@ -270,16 +270,16 @@ html {
     flex-direction: column;
     justify-content: space-between;
 }
-.descrip-up h2 {
+.tittle-h2 {
     color: var(--main-two-color);
     font-size: 16px;
 }
-.descrip-up h1 {
+.tittle-h1 {
     font-size: 40px;
     font-family: 'Roboto';
     color: #1D2F40;
 }
-.descrip-up p {
+.parrafo {
     text-align: justify;
     font-size: 13px;
     font-family: Helvetica;
@@ -293,7 +293,7 @@ html {
     width: 50%;
     padding: 0px 15px;
 }
-.my h2 {
+.subtitle {
     margin-bottom: 10px;
     font-size: 18px;
     font-family: 'Roboto';
@@ -349,6 +349,8 @@ html {
     padding: 15px;
     font-size: 19px;
     font-family: Helvetica;
+
+    transition: all 0.5s ease-in-out;
 }
 .box-counter
 .fa-plus {
@@ -361,37 +363,71 @@ html {
 /* four part */
 .four-part {
     width: 57em;
-    height: 48em;
-    display: grid;
-    /* place-items: center; */
-    border: 2px solid red;
+    height: 54em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .service-info {
-    border: 2px solid blue;
     height: 10em;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.service-info .parrafo {
+    text-align: center;
+    width: 50em;
 }
 .box-areas {
-    border: 2px solid green;
     display: grid;
-    gap: 5px;
+    gap: 20px;
     grid-template-columns: repeat(3, 1fr);
 }
 .container {
     border: 1px solid var(--main-two-color);
+    border-radius: 10px;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    padding: 10px;
+    grid-template-rows: repeat(3,0.5fr);
+    padding: 25px;
+
+    transition: 0.4s;
 }
 .img-area {
     width: 5em;
+    margin-bottom: 20px;
     filter: invert(61%) sepia(51%) saturate(519%) hue-rotate(44deg) brightness(90%) contrast(84%);;
 }
+.descrip-area {
+    display: flex;
+    flex-direction: column;
+}
+.descrip-area a {
+    margin-top: 15px;
+    color: var(--main-two-color);
+    font-size: 12px;
+    font-family: 'Helvetica';
+}
 
+/* five part */
+
+.five-part {
+    width: 100%;
+    height: 35em;
+    background-color: var(--main-color);
+}
+.card-client {
+    width: 20px;
+}
+
+.container:hover {
+    border: 1px solid black;
+}
+.descrip-area a:hover {
+    color: black;
+}
 .options-head a:hover,
 .options-head a.active {
     color: var(--main-two-color);
@@ -402,7 +438,6 @@ html {
 
 img {
     width: 100%;
-    height: 100%;
 }
 
 a {

@@ -85,7 +85,7 @@ html {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 .options-head a {
     color: black;
@@ -356,6 +356,40 @@ html {
     position: absolute;
     right: 45px;
     top: 10px;
+}
+
+/* four part */
+.four-part {
+    width: 57em;
+    height: 48em;
+    display: grid;
+    /* place-items: center; */
+    border: 2px solid red;
+}
+
+.service-info {
+    border: 2px solid blue;
+    height: 10em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box-areas {
+    border: 2px solid green;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.container {
+    border: 1px solid var(--main-two-color);
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 10px;
+}
+.img-area {
+    width: 5em;
+    filter: invert(61%) sepia(51%) saturate(519%) hue-rotate(44deg) brightness(90%) contrast(84%);;
 }
 
 .options-head a:hover,

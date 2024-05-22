@@ -16,8 +16,8 @@ html {
 }
 
 .header {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
 }
 /* Primer nav */
 .box-left {
@@ -80,21 +80,21 @@ html {
 .card-logo {
     width: 12rem;
 }
-.options-head {
-    width: 42rem;
+.menu-horizontal {
+    width: 35rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-family: 'Poppins', sans-serif;
 }
-.options-head a {
+.menu-horizontal .primary {
     color: black;
     position: relative;
     padding: 0 9px;
 
     transition: 0.3s;
 }
-.options-head a:after {
+.menu-horizontal .primary:after {
     content: "";
     position: absolute;
     background-color: var(--main-two-color);
@@ -105,14 +105,29 @@ html {
 
     transition: 0.3s;
 }
-
-.fa-chevron-down {
-    margin-left: 5px;
-    transition: all 0.5s ease-out;
+.menu-vertical {
+    position: absolute;
+    display: none;
+    bottom: -240.7px;
+    width: 105px;
+    height: 240px;
+    border-top: 3px solid var(--main-two-color);
+    background-color: var(--main-color);
 }
-
-.fa-chevron-down:hover {
-    transform: rotateY(-360deg);
+.menu-vertical li a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+.secondary {
+    padding-bottom: 25px;
+}
+.secondary .fa-chevron-down {
+    margin-left: 5px;
+    transition: all 0.3s ease-out;
+}
+.secondary .fa-chevron-down:hover {
+    transform: rotateY(-180deg);
 }
 
 /* Bloque main */
@@ -376,6 +391,7 @@ html {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 20px;
 }
 .service-info .parrafo {
     text-align: center;
@@ -438,16 +454,15 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border: 2px solid red; */
 }
 .container-caract {
     width: 56.8em;
-    height: 16em;
+    height: 18em;
     display: flex;
     justify-content: space-evenly;
 }
 .caract-box {
-    width: 30em;
+    width: 31em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -455,11 +470,8 @@ html {
 }
 .caract-porcent {
     display: grid;
-    width: 25em;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
 }
 .porcent {
     display: flex;
@@ -480,12 +492,12 @@ html {
 .porcent .tittle-h2 {
     color: var(--main-color);
     margin-top: 10px;
+    font-size: 16px;
 }
 .caract-box .tittle-h1 {
     font-size: 37px;
 }
 .container-coments {
-    text-align: center;
     margin-top: 20px;
 }
 .box-coments {
@@ -494,7 +506,7 @@ html {
     display: flex;
     height: 15em;
     position: relative;
-    padding: 20px;
+    padding: 22px;
     flex-direction: column;
     align-items: center;
 }
@@ -517,7 +529,11 @@ html {
 .icon-coments {
     width: 50px;
     filter: invert(61%) sepia(51%) saturate(519%) hue-rotate(44deg) brightness(90%) contrast(84%);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+}
+.box-coments .parrafo {
+    text-align: center;
+    font-size: 16px;
 }
 
 .container:hover {
@@ -526,12 +542,18 @@ html {
 .descrip-area a:hover {
     color: black;
 }
-.options-head a:hover,
-.options-head a.active {
+.menu-horizontal a:hover
+.menu-horizontal a.active {
     color: var(--main-two-color);
 }
-.options-head a:hover:after {
+.menu-horizontal a:hover:after {
     width: 100%;
+}
+.menu-horizontal a:hover {
+    color: var(--main-two-color);
+}
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
 }
 
 img {
@@ -541,4 +563,5 @@ img {
 
 a {
     text-decoration: none;
+    color: black;
 }

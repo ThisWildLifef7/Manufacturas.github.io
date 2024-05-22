@@ -450,7 +450,7 @@ html {
 /* six part */
 .six-part {
     width: 57rem;
-    height: 44em;
+    height: 47em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -499,6 +499,7 @@ html {
 }
 .container-coments {
     margin-top: 20px;
+    margin-bottom: 100px;
 }
 .box-coments {
     border: 1px solid var(--main-two-color);
@@ -515,10 +516,13 @@ html {
     align-items: center;
     flex-direction: column;
     position: absolute;
-    bottom: -90px;
+    bottom: -78px;
 }
 .card-person img {
     object-fit: cover;
+}
+.card-person .tittle-h1 {
+    font-size: 20px;
 }
 .figure-person {
     width: 5em;
@@ -534,6 +538,45 @@ html {
 .box-coments .parrafo {
     text-align: center;
     font-size: 16px;
+}
+.card-person .parrafo {
+    font-size: 12px;
+}
+
+/* seven part */
+.seven-part {
+    width: 100%;
+    height: 25em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./pics/team.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.container-contc {
+    width: 35em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.container-contc .tittle-h1 {
+    color: white;
+    font-size: 30px;
+}
+.container-contc .parrafo {
+    text-align: center;
+    color: #c2c7ca;
+}
+
+/* eight part */
+.eight-part {
+    width: 57rem;
+    height: 44em;
 }
 
 .container:hover {

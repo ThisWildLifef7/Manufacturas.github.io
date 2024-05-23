@@ -626,6 +626,37 @@ html {
     color: lightgray;
 }
 
+
+/* pie de pagina */
+.footer {
+    width: 100%;
+    display: flex;
+    background-color: var(--main-color);
+    justify-content: center;
+}
+.container-footer {
+    width: 57rem;
+    height: 20em;
+    display: flex;
+    border: 2px solid black;
+}
+.info-left {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+}
+.info-left .parrafo {
+    color: white;
+}
+.info-right {
+    border: 2px solid green;
+    display: flex;
+    color: white;
+}
+.info-right a {
+    color: white;
+}
+
 .card-tela:hover .parrafito {
     color: white;
 }

@@ -285,21 +285,6 @@ html {
     flex-direction: column;
     justify-content: space-between;
 }
-.tittle-h2 {
-    color: var(--main-two-color);
-    font-size: 16px;
-}
-.tittle-h1 {
-    font-size: 40px;
-    font-family: 'Roboto';
-    color: #1D2F40;
-}
-.parrafo {
-    text-align: justify;
-    font-size: 13px;
-    font-family: Helvetica;
-    color: #757575;
-}
 
 .descrip-down {
     display: flex;
@@ -351,7 +336,7 @@ html {
     color: white;
 }
 .counter-info h1 {
-    width: 6em;
+    width: 9em;
     font-size: 40px;
     font-family: 'Roboto';
     font-weight: 500;
@@ -362,16 +347,21 @@ html {
     align-items: center;
     position: relative;
     padding: 15px;
-    font-size: 19px;
+    gap: 5px;
+    font-size: 20px;
     font-family: Helvetica;
+    text-align: center;
 
     transition: all 0.5s ease-in-out;
+}
+.box-counter h3 {
+    font-size: 18px;
 }
 .box-counter
 .fa-plus {
     color: var(--main-two-color);
     position: absolute;
-    right: 45px;
+    right: 25px;
     top: 10px;
 }
 
@@ -386,15 +376,13 @@ html {
 
 .service-info {
     height: 10em;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 20px;
 }
-.service-info .parrafo {
-    text-align: center;
+.service-info .parrafito {
     width: 50em;
 }
 .box-areas {
@@ -535,8 +523,7 @@ html {
     filter: invert(61%) sepia(51%) saturate(519%) hue-rotate(44deg) brightness(90%) contrast(84%);
     margin-bottom: 25px;
 }
-.box-coments .parrafo {
-    text-align: center;
+.box-coments .parrafito {
     font-size: 16px;
 }
 .card-person .parrafo {
@@ -568,17 +555,85 @@ html {
     color: white;
     font-size: 30px;
 }
-.container-contc .parrafo {
-    text-align: center;
+.container-contc .parrafito {
     color: #c2c7ca;
 }
 
 /* eight part */
 .eight-part {
     width: 57rem;
-    height: 44em;
+}
+.container-tela {
+    height: 69em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box-descrip-tela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.box-descrip-tela .parrafo {
+    width: 45em;
+    text-align: center;
+}
+.box-type-tela {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card-tela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 60px;
+}
+.box-tela-img {
+    width: 17.7em;
+    height: 20em;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.box-tela-img img {
+    object-fit: cover;
+    border-radius: 10px;
+    background-position: center;
+
+    transition: all 0.3s ease-in-out;
+}
+.descrip-tela {
+    width: 14em;
+    padding: 30px 20px;
+    color: white;
+    bottom: -60px;
+    position: absolute;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    text-align: center;
+}
+.descrip-tela .tittle-h2 {
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-family: Helvetica;
+}
+.descrip-tela .parrafito {
+    color: lightgray;
 }
 
+.card-tela:hover .parrafito {
+    color: white;
+}
+.box-tela-img:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    filter: contrast(120%);
+}
 .container:hover {
     border: 1px solid black;
 }
@@ -599,12 +654,33 @@ html {
     display: block;
 }
 
+.tittle-h2 {
+    color: var(--main-two-color);
+    font-size: 16px;
+}
+.tittle-h1 {
+    font-size: 40px;
+    font-family: 'Roboto';
+    color: #1D2F40;
+}
+.parrafo {
+    text-align: justify;
+    font-size: 13px;
+    font-family: Helvetica;
+    color: #757575;
+}
+.parrafito {
+    text-align: center;
+    font-size: 13px;
+    font-family: Helvetica;
+    color: #757575;
+}
+
 img {
     width: 100%;
     height: 100%;
 }
-
 a {
     text-decoration: none;
-    color: black;
+    color:black;
 }

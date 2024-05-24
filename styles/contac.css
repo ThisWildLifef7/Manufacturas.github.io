@@ -1,0 +1,12 @@
+@import url('../styles/style.css');
+
+:root {
+    --main-color: #1F2F3F;
+    --main-two-color: #7AA93C;
+    --color-hover-button: #388E3C;
+}
+
+.header {
+    background-color: var(--main-color);
+    border: 2px solid black;
+}

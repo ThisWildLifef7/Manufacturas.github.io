@@ -1,6 +1,7 @@
 :root {
     --main-color: #1F2F3F;
     --main-two-color: #7AA93C;
+    --color-hover-button: #388E3C;
 }
 
 * {
@@ -632,31 +633,66 @@ html {
     width: 100%;
     display: flex;
     background-color: var(--main-color);
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .container-footer {
     width: 57rem;
     height: 20em;
     display: flex;
-    border: 2px solid black;
+    justify-content: space-between;
+}
+.f1 {
+    margin-top: 80px;
 }
 .info-left {
+    width: 20rem;
+    gap: 14px;
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
 }
 .info-left .parrafo {
     color: white;
 }
 .info-right {
-    border: 2px solid green;
-    display: flex;
     color: white;
+    display: flex;
+    gap: 50px;
+}
+.box-enlaces h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Helvetica;
+}
+.enlaces {
+    gap: 10px;
+    display: flex;
+    font-family: Helvetica;
+    font-size: 13px;
+    flex-direction: column;
+}
+.enlaces a {
+    transition: all 0.3s ease-in-out;
+}
+.enlaces li i {
+    margin-right: 10px;
+    color: var(--main-two-color);
 }
 .info-right a {
     color: white;
 }
 
+/* yo */
+.master {
+    width: 57rem;
+    padding: 20px 0;
+    border-top: 2px solid var(--main-two-color);
+}
+
+.enlaces li a:hover {
+    color: var(--main-two-color);
+}
 .card-tela:hover .parrafito {
     color: white;
 }
@@ -667,6 +703,9 @@ html {
 }
 .container:hover {
     border: 1px solid black;
+}
+.initial-button:hover {
+    background-color: var(--color-hover-button);
 }
 .descrip-area a:hover {
     color: black;

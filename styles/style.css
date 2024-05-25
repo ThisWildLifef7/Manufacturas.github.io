@@ -86,7 +86,7 @@ html {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sora';
 }
 .menu-horizontal .primary {
     color: black;
@@ -110,15 +110,16 @@ html {
     position: absolute;
     display: none;
     bottom: -240.7px;
-    width: 105px;
+    width: 130px;
     height: 240px;
     border-top: 3px solid var(--main-two-color);
     background-color: var(--main-color);
 }
 .menu-vertical li a {
     display: block;
-    padding: 10px;
+    padding: 8.7px;
     color: white;
+    border-bottom: 0.5px solid #757575;
 }
 .secondary {
     padding-bottom: 25px;
@@ -173,27 +174,23 @@ html {
     font-family: "Ubuntu Sans";
 }
 .p-one {
-    font-family: 'Roboto';
+    font-family: 'Abel';
     font-size: 13px;
 }
 
 .descrip-right {
-    width: 20rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 10px;
     margin-bottom: 40px;
 }
 .initial-button {
     background-color: var(--main-two-color);
     padding: 15px;
     border: 0;
-    border-radius: 5px;
     font-weight: bold;
     font-family: 'Segoe UI';
     cursor: pointer;
     color: white;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .card-info {
@@ -705,7 +702,7 @@ html {
     border: 1px solid black;
 }
 .initial-button:hover {
-    background-color: var(--color-hover-button);
+    background-color: #3e8e41;
 }
 .descrip-area a:hover {
     color: black;
@@ -735,8 +732,8 @@ html {
 }
 .parrafo {
     text-align: justify;
-    font-size: 13px;
-    font-family: Helvetica;
+    font-size: 14px;
+    font-family: 'Abel';
     color: #757575;
 }
 .parrafito {

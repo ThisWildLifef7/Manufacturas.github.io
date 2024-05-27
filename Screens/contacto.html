@@ -42,72 +42,66 @@
         </div>
     </header>
     <main class="main">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.6980806585016!2d-76.97221422402264!3d-12.064282288173953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c65e98e0e9ff%3A0xd02abd3cfd61eca3!2sAv.%20Los%20Castillos%20504%2C%20Lima%2015023!5e0!3m2!1ses-419!2spe!4v1716756016368!5m2!1ses-419!2spe" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <section class="container-part-contact-one">
-            <div class="card-info-contact">
-                <div class="box-descrip-contact">
-                    <h1 class="tittle-h1">Contáctenos</h1>
-                    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, repudiandae nisi voluptas, deleniti laudantium molestias laborum reprehenderit, voluptatem aliquid nesciunt veritatis laboriosam mollitia.</p>
-                </div>
-                <figure class="card-image-contact">
-                    <img class="picture-contact" src="../pics/working.jpg" alt="img-contact">
-                </figure>
-            </div>
-        </section>
-        <section class="container-part-contact-two">
             <article class="box-up-contact">
-                <div class="up-info-contact">   
-                    <h2 class="subtitle">Información de Contacto</h2>
-                    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit optio ducimus ab quos doloribus a alias deserunt debitis minus quas eius ullam totam, ipsam dolore molestias.</p>
-                </div>
                 <div class="down-info-contact">
                     <div class="card-contact">
-                        <i class="fa-solid fa-phone"></i>
-                        <li class="subtitle">+51 923 232 414</li>
-                        <p class="parrafito">Lorem ipsum dolor sit amet consectetur.</p>
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <div class="shortcard-info">
+                            <h2 class="tittle-h2">Número de celular</h2>
+                            <li class="parrafo">(+51) 923 232 414</li>
+                        </div>
                     </div>
                     <div class="card-contact">
                         <i class="fa-regular fa-envelope"></i>
-                        <li class="subtitle">manufacturas@gmail.com</li>
-                        <p class="parrafito">Lorem ipsum dolor sit amet consectetur.</p>
+                        <div class="shortcard-info">
+                            <h2 class="tittle-h2">Correo electrónico</h2>
+                            <li class="parrafo">manufacturas@gmail.com</li>
+                        </div>
                     </div>
                     <div class="card-contact">
                         <i class="fa-solid fa-location-dot"></i>
-                        <div class="unico">
-                            <li class="subtitle">Av. Los Castillos 504</li>
-                            <figure class="picture-country">
-                                <img src="../pics/iconos/peru.png" alt="peru">
-                            </figure>
+                        <div class="shortcard-info">
+                            <h2 class="tittle-h2">Ubicación</h2>
+                            <li class="parrafo">Av. Los Castillos 504</li>
                         </div>
-                        <p class="parrafito">Lorem ipsum dolor sit amet consectetur.</p>
                     </div>
                 </div>
             </article>
             <article class="box-down-contact">
                 <div class="box-form">
                     <div class="box-up-descrip">
-                        <h2>Ponerse en contacto!</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam harum officiis, repellat quos ex ipsum.</p>
+                        <h2 class="tittle-h1">Ponerse en contacto!</h2>
+                        <p class="parrafito">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum recusandae et consequatur? Vitae debitis optio mollitia animi reiciendis minus perspiciatis ducimus delectus dignissimos dolores, saepe neque sequi maxime accusamus. Ducimus.</p>
                     </div>
                     <form action="/" class="formulario">
-                        <label for="GET-name">Nombre:</label>
-                        <input type="text" id="GET-name" name="name">
-                        <label for="GET-apellido">Apellido:</label>
-                        <input type="text" id="GET-apellido" name="apellido">
-                        <label for="GET-email">Email:</label>
-                        <input type="email" id="GET-email" name="email">
-                        <label for="GET-telefono">Teléfono:</label>
-                        <input type="text" id="GET-telefono" name="GET-telefono">
-                        <label for="GET-asunto">Asunto:</label>
-                        <input type="text" id="GET-asunto" name="asunto">
-                        <label for="GET-mensaje">Mensaje:</label>
-                        <textarea name="mensaje" id="GET-mensaje"></textarea>
-                        <input class="form-button" type="submit" value="Enviar">
+                        <div class="user-details">
+                            <div class="input-box">
+                                <label for="GET-name" class="details">Nombre:</label>
+                                <input type="text" id="GET-name" name="name" placeholder="Ingresa tu nombre" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="GET-apellido" class="details">Apellido:</label>
+                                <input type="text" id="GET-apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="GET-email" class="details">Email:</label>
+                                <input type="email" id="GET-email" name="email" placeholder="Ingresa tu email" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="GET-telefono" class="details">Teléfono:</label>
+                                <input type="text" id="GET-telefono" name="GET-telefono" placeholder="Ingresa tu numero" required>
+                            </div>
+                            <div class="input-box-one">
+                                <label for="GET-mensaje" class="details">Mensaje:</label>
+                                <textarea cols="10"name="mensaje" id="GET-mensaje" placeholder="Escribe algo aqui..." required></textarea>
+                            </div>
+                        </div>
+                        <div class="box-button-form">
+                            <button type="submit" class="initial-button">Enviar</button>
+                        </div>
                     </form>
-                </div>
-                <div class="box-map">
-                    <h2 class="subtitle">Nuestra locación</h2>
-                    <p class="parrafo">Lorem, ipsum dolor sit amet consectetur adipisicing elit, Ab ratione at ipsa delectus odit.</p>
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.698157010319!2d-76.97221422579345!3d-12.06427704222525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c65e99725265%3A0xb02ed98eeefc3029!2sAv.%20Los%20Castillos%20592%2C%20Ate%2015023!5e0!3m2!1ses!2spe!4v1716560953914!5m2!1ses!2spe" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </article>
         </section>

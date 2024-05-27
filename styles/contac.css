@@ -4,114 +4,135 @@
     --main-color: #1F2F3F;
     --main-two-color: #7AA93C;
     --color-hover-button: #388E3C;
+
+    --parrafo: "PT Sans";
+    --tittle: "PT Serif";
+}
+
+.map {
+    margin-top: 67px;
 }
 
 .container-part-contact-one {
-    width: 100%;
-    height: 25rem;
-    background-image: linear-gradient(rgba(4, 5, 9, 0.3),
-    rgba(4, 5, 9, 0.4)), url(../pics/contact.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    display: grid;
-    place-content: center;
-}
-.card-info-contact {
-    width: 57rem;
-    position: relative;
-}
-.box-descrip-contact {
-    width: 30rem;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.box-descrip-contact .tittle-h1,
-.box-descrip-contact .parrafo {
-    color: white;
-}
-.card-image-contact {
-    width: 20rem;
-    height: 35rem;
-    position: absolute;
-    padding-top: 40px;
-    border-radius: 25rem 25rem 0 0;
-    top: 10px;
-    right: 0;
-}
-.picture-contact {
-    border-radius: 25rem 25rem 0 0; 
-    transition: box-shadow .1s;
-}
-
-.container-part-contact-two {
-    width: 57rem;
-    height: 50rem;
+    width: 70rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border: 2px solid red;
 }
 .box-up-contact {
-    width: 34rem;
+    margin: 40px 0 40px;
 }
 .up-info-contact {
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
 }
-
 .down-info-contact {
     display: flex;
+    justify-content: space-evenly;
 }
 .card-contact {
+    width: 16rem;
+    height: 130px;
     display: flex;
-    height: 9em;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: space-evenly;
 }
 .card-contact i {
-    background-color: var(--main-two-color);
-    color: white;
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 50% 0;
+    color: var(--main-two-color);
+    font-size: 30px;
 }
 .card-contact .subtitle {
     font-size: 14px;
+}
+.shortcard-info {
+    display: grid;
+    gap: 10px;
+}
+.shortcard-info .tittle-h2 {
+    color: black;
+    font-size: 18px;
     font-weight: 500;
+    font-family: 'Roboto';
 }
-.unico {
-    display: flex;
-    position: relative;
-}
-.picture-country {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: -25px;
-    top: -2px;
+.shortcard-info li {
+    font-size: 14px;
 }
 
 .box-down-contact {
     display: flex;
-    border: 2px solid blue;
+    justify-content: center;
 }
-.box-form {
-    
+.box-up-descrip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
-.box-map {
-    width: 28rem;
-    border: 2px solid green;
+.box-up-descrip .parrafito {
+    margin: 20px 0 20px;
+    width: 70%;
+}
+.formulario {
+    padding: 25px 30px;
+}
+.user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.input-box {
+    margin-bottom: 5px;
+    width: calc(100% / 2 - 20px);
+}
+.input-box-one {
+    width: calc(100% / 1);
+}
+.details {
+    display: block;
+    font-weight: 500;
+    margin: 20px 0 12px 0;
+}
+.input-box input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.input-box-one textarea {
+    width: 100%;
+    height: 10rem;
+    resize: none;
+    padding: 15px;
+    outline: none;
+    font-size: 16px;
+    font-family: var(--parrafo);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.box-button-form {
+    margin: 20px 0;
+}
+.box-button-form button {
+    width: 100%;
     padding: 20px;
-}
-.box-map .parrafo {
-    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
 }
 
-.picture-contact:hover {
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
+
+.input-box input:focus {
+    border-color: var(--main-two-color);
+}
+.input-box-one textarea:is(:focus, :valid) {
+    border-color: var(--main-two-color);
 }

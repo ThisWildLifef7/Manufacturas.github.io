@@ -2,6 +2,9 @@
     --main-color: #1F2F3F;
     --main-two-color: #7AA93C;
     --color-hover-button: #388E3C;
+
+    --parrafo: "PT Sans";
+    --tittle: "PT Serif";
 }
 
 * {
@@ -55,7 +58,7 @@ html {
     display: flex;
     justify-content: space-between;
     width: 37rem;
-    font-family: "Ubuntu", sans-serif;
+    font-family: var(--parrafo);
     font-size: 14px;
 }
 .fa-phone, .fa-envelope, .fa-location-dot {
@@ -86,7 +89,8 @@ html {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-family: 'Sora';
+    font-family: var(--tittle);
+    font-size: 17px;
 }
 .menu-horizontal .primary {
     color: black;
@@ -117,7 +121,7 @@ html {
 }
 .menu-vertical li a {
     display: block;
-    padding: 8.7px;
+    padding: 7.7px;
     color: white;
     border-bottom: 0.5px solid #757575;
 }
@@ -156,7 +160,7 @@ html {
     position: relative;
 }
 .descrip-left {
-    width: 30rem;
+    width: 41rem;
     height: 18em;
     display: flex;
     color: white;
@@ -165,20 +169,21 @@ html {
     margin-bottom: 20px;
 }
 .descrip-left h2 {
-    font-family: 'Roboto';
+    font-family: var(--tittle);
     font-size: 16px;
     font-weight: 400;
 }
 .descrip-left h1 {
-    font-size: 3.4em;
-    font-family: "Ubuntu Sans";
+    font-size: 50px;
+    font-family: var(--tittle);
+    color: white;
 }
-.p-one {
-    font-family: 'Abel';
-    font-size: 13px;
+.descrip-left .parrafo {
+    color: white;
 }
 
 .descrip-right {
+    display: inline-block;
     margin-bottom: 40px;
 }
 .initial-button {
@@ -186,8 +191,7 @@ html {
     padding: 15px;
     border: 0;
     font-weight: bold;
-    font-family: 'Segoe UI';
-    cursor: pointer;
+    font-family: var(--tittle);
     color: white;
 
     transition: all 0.3s ease-in-out;
@@ -203,25 +207,29 @@ html {
 .card {
     width: 20em;
     height: 10em;
+    padding: 30px;
     background-color: var(--main-color);
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
     color: white;
 }
-.card .fa-solid {
+.card i {
     font-size: 25px;
     color: var(--main-two-color);
-    margin-left: 15px;
+    margin-right: 20px;
 }
 .front-text {
+    display: grid;
+    gap: 10px;
+}
+.front-text .tittle-h2 {
+    font-size: 16px;
+}
+.front-text .parrafo {
+    color: white;
     font-size: 15px;
-    display: flex;
-    width: 15em;
-    height: 5em;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
 /* second body */
@@ -291,19 +299,13 @@ html {
     width: 50%;
     padding: 0px 15px;
 }
-.subtitle {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-family: 'Roboto';
-    color: var(--main-color);
-}
 .vision {
     border-right: 1px solid var(--main-two-color);
 }
 .info-ame {
     display: flex;
     justify-content: space-evenly;
-    font-family: Helvetica;
+    font-family: var(--parrafo);
     font-size: 13px;
     color: #757575;
 }
@@ -333,21 +335,18 @@ html {
     align-items: center;
     color: white;
 }
-.counter-info h1 {
+.counter-info .tittle-h1 {
     width: 9em;
     font-size: 40px;
-    font-family: 'Roboto';
-    font-weight: 500;
+    color: white;
 }
 .box-counter {
     display: flex;
     flex-direction: column;
-    align-items: center;
     position: relative;
     padding: 15px;
-    gap: 5px;
     font-size: 20px;
-    font-family: Helvetica;
+    font-family: var(--tittle);
     text-align: center;
 
     transition: all 0.5s ease-in-out;
@@ -410,7 +409,6 @@ html {
     margin-top: 15px;
     color: var(--main-two-color);
     font-size: 12px;
-    font-family: 'Helvetica';
 }
 
 /* five part */
@@ -481,7 +479,7 @@ html {
     font-size: 16px;
 }
 .caract-box .tittle-h1 {
-    font-size: 37px;
+    font-size: 34px;
 }
 .container-coments {
     margin-top: 20px;
@@ -617,8 +615,7 @@ html {
 .descrip-tela .tittle-h2 {
     color: white;
     margin-bottom: 10px;
-    font-weight: 700;
-    font-family: Helvetica;
+    font-weight: 400;
 }
 .descrip-tela .parrafito {
     color: lightgray;
@@ -659,8 +656,8 @@ html {
 .box-enlaces h2 {
     margin-bottom: 15px;
     font-size: 18px;
-    font-weight: 600;
-    font-family: Helvetica;
+    font-weight: 500;
+    font-family: var(--parrafo);
 }
 .enlaces {
     gap: 10px;
@@ -724,25 +721,35 @@ html {
 .tittle-h2 {
     color: var(--main-two-color);
     font-size: 16px;
+    font-family: var(--tittle);
 }
 .tittle-h1 {
     font-size: 40px;
-    font-family: 'Roboto';
+    font-family: var(--tittle);
     color: #1D2F40;
 }
 .parrafo {
-    text-align: justify;
+    text-align: left;
     font-size: 14px;
-    font-family: 'Abel';
+    font-family: var(--parrafo);
     color: #757575;
 }
 .parrafito {
     text-align: center;
     font-size: 13px;
-    font-family: Helvetica;
+    font-family: var(--parrafo);
     color: #757575;
 }
+.subtitle {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: var(--tittle);
+    color: var(--main-color);
+}
 
+button {
+    cursor: pointer;
+}
 img {
     width: 100%;
     height: 100%;

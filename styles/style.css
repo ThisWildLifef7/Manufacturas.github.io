@@ -121,7 +121,7 @@ html {
 }
 .menu-vertical li a {
     display: block;
-    padding: 7.7px;
+    padding: 7.8px;
     color: white;
     border-bottom: 0.5px solid #757575;
 }
@@ -236,7 +236,7 @@ html {
 .two-part {
     display: grid;
     place-items: center;
-    width: 57em;
+    width: 70em;
     height: 48em;
 }
 .two-box {
@@ -364,7 +364,7 @@ html {
 
 /* four part */
 .four-part {
-    width: 57em;
+    width: 65em;
     height: 54em;
     display: flex;
     flex-direction: column;
@@ -402,11 +402,13 @@ html {
     filter: invert(61%) sepia(51%) saturate(519%) hue-rotate(44deg) brightness(90%) contrast(84%);
 }
 .descrip-area {
+    height: 6rem;
     display: flex;
+    text-wrap: balance;
     flex-direction: column;
+    justify-content: space-between;
 }
 .descrip-area a {
-    margin-top: 15px;
     color: var(--main-two-color);
     font-size: 12px;
 }
@@ -422,7 +424,7 @@ html {
 .container-clients {
     /* border: 2px solid red; */
     margin: 0 auto;
-    width: 57em;
+    width: 70em;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -433,14 +435,13 @@ html {
 
 /* six part */
 .six-part {
-    width: 57rem;
+    width: 65rem;
     height: 47em;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .container-caract {
-    width: 56.8em;
     height: 18em;
     display: flex;
     justify-content: space-evenly;
@@ -557,7 +558,7 @@ html {
 
 /* eight part */
 .eight-part {
-    width: 57rem;
+    width: 65rem;
 }
 .container-tela {
     height: 69em;
@@ -631,7 +632,7 @@ html {
     flex-direction: column;
 }
 .container-footer {
-    width: 57rem;
+    width: 70rem;
     height: 20em;
     display: flex;
     justify-content: space-between;
@@ -679,7 +680,7 @@ html {
 
 /* yo */
 .master {
-    width: 57rem;
+    width: 70rem;
     padding: 20px 0;
     border-top: 2px solid var(--main-two-color);
 }

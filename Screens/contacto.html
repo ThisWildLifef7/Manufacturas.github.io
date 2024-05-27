@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs intl-tel-input/17.0.8/css/intlTelInput.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="https://kit.fontawesome.com/326d6d93eb.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -64,7 +64,7 @@
                         <i class="fa-solid fa-location-dot"></i>
                         <div class="shortcard-info">
                             <h2 class="tittle-h2">Ubicación</h2>
-                            <li class="parrafo">Av. Los Castillos 504</li>
+                            <li class="parrafo">Av. Los Castillos 504, Lima 15023</li>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                         <h2 class="tittle-h1">Ponerse en contacto!</h2>
                         <p class="parrafito">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum recusandae et consequatur? Vitae debitis optio mollitia animi reiciendis minus perspiciatis ducimus delectus dignissimos dolores, saepe neque sequi maxime accusamus. Ducimus.</p>
                     </div>
-                    <form action="/" class="formulario">
+                    <form action="/" class="formulario" onsubmit="process(event)">
                         <div class="user-details">
                             <div class="input-box">
                                 <label for="GET-name" class="details">Nombre:</label>
@@ -91,7 +91,7 @@
                             </div>
                             <div class="input-box">
                                 <label for="GET-telefono" class="details">Teléfono:</label>
-                                <input type="text" id="GET-telefono" name="GET-telefono" placeholder="Ingresa tu numero" required>
+                                <input type="tel" id="GET-telefono" name="GET-telefono" placeholder="Ingresa tu numero" required>
                             </div>
                             <div class="input-box-one">
                                 <label for="GET-mensaje" class="details">Mensaje:</label>

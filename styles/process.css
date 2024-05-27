@@ -1,1 +1,19 @@
 @import url('../styles/style.css');
+
+:root {
+    --main-color: #1F2F3F;
+    --main-two-color: #7AA93C;
+    --color-hover-button: #388E3C;
+
+    --parrafo: "PT Sans";
+    --tittle: "PT Serif";
+}
+
+.main {
+    border: 2px solid red;
+    margin-top: 100px;
+}
+
+.part-sect {
+    border: 2px solid blue;
+}

@@ -9,8 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css">
+    <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css"
+   />
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
+    
     <script src="https://kit.fontawesome.com/326d6d93eb.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -72,9 +76,9 @@
                 <div class="box-form">
                     <div class="box-up-descrip">
                         <h2 class="tittle-h1">Ponerse en contacto!</h2>
-                        <p class="parrafito">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum recusandae et consequatur? Vitae debitis optio mollitia animi reiciendis minus perspiciatis ducimus delectus dignissimos dolores, saepe neque sequi maxime accusamus. Ducimus.</p>
+                        <p class="parrafito">¡Hablemos! Estamos aquí para responder tus preguntas y comentarios. Completa el formulario o contáctanos directamente para obtener más información sobre nuestros productos y servicios, o para discutir cualquier consulta específica que puedas tener. Esperamos con interés trabajar contigo.</p>
                     </div>
-                    <form action="/" class="formulario" id="login" onsubmit="process(event)">
+                    <form action="/" class="formulario" id="lookup" onsubmit="process(event)">
                         <div class="user-details">
                             <div class="input-box">
                                 <label for="GET-name" class="details">Nombre:</label>
@@ -90,7 +94,7 @@
                             </div>
                             <div class="input-box">
                                 <label for="phone" class="details">Teléfono:</label>
-                                <input type="tel" id="phone" name="phone">
+                                <input type="tel" id="phone" name="phone" required>
                             </div>
                             <div class="input-box-one">
                                 <label for="GET-mensaje" class="details">Mensaje:</label>
@@ -99,7 +103,7 @@
                             <div class="alert alert-info"></div>
                         </div>
                         <div class="box-button-form">
-                            <button type="submit" class="initial-button">Enviar</button>
+                            <button type="submit" class="initial-button" id="btn">Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -112,7 +116,7 @@
                 <figure class="card-logo">
                     <img src="../pics/logotipo-reel.png" alt="logotipo">
                 </figure>
-                <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis cumque deleniti enim, quo vitae corporis.</p>
+                <p class="parrafo">Manufacturas América EIRL - Tu socio confiable en moda de calidad. Descubre nuestra pasión por la excelencia en cada prenda.</p>
             </div>
             <div class="info-right f1">
                 <div class="box-enlaces">

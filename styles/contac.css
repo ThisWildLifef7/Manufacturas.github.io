@@ -129,17 +129,7 @@
     color: white;
 }
 
-.alert-info {
-    display: none;
-}
-.iti__selected-flag {
-    /* border: 2px solid black; */
-}
-.iti__flag {
-}
-.iti__arrow {
-}
-
+/* form input */
 .input-box input:focus {
     border-color: var(--main-two-color);
 }

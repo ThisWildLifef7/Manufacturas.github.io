@@ -236,7 +236,7 @@ html {
 .two-part {
     display: grid;
     place-items: center;
-    width: 70em;
+    width: 60em;
     height: 48em;
 }
 .two-box {

@@ -15,19 +15,24 @@ body {
 
 .main {
     margin-top: 70px;
-    border: 2px solid black;
 }
 
 .part-us {
-    width: 75rem;
-    height: 33rem;
-    border: 2px solid red;
+    width: 80rem;
+    height: 36rem;
+    /* border: 2px solid red; */
 }
 
 .s1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)), url('/pics/procesos/fond-blur.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 .s2 {
     color: white;
@@ -35,18 +40,32 @@ body {
 }
 .container-descrip {
     width: 15rem;
-    border: solid;
 }
 .container-descrip .tittle-h1 {
     font-size: 50px;
+    color: white;
+}
+.container-descrip .fa-solid {
+    font-size: 40px;
+    color: var(--main-two-color);
+    position: absolute;
+    filter: brightness(1.75);
+}
+.fa-caret-up {
+    top: 165px;
+    left: 110px;
+    transform: rotate(45deg);
+}
+.fa-caret-down {
+    left: 120px;
+    top: 145px;
+    transform: rotate(45deg);
 }
 
 .container-animated {
     width: 600px;
     height: 500px;
     display: flex;
-    border: solid white;
-    /* flex-direction: row-reverse; */
     justify-content: space-evenly;
 }
 .card-slid {

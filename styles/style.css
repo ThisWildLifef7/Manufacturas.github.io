@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 :root {
     --main-color: #1F2F3F;
     --main-two-color: #7AA93C;
@@ -5,6 +6,9 @@
 
     --parrafo: "PT Sans";
     --tittle: "PT Serif";
+    --font-card: "Poppins", sans-serif;
+    --h2-font-size: 1rem;
+    --small-font-size: .750rem;
 }
 
 * {
@@ -561,17 +565,16 @@ html {
     width: 65rem;
 }
 .container-tela {
-    height: 69em;
+    height: 75em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .box-descrip-tela {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-bottom: 30px;
 }
 .box-descrip-tela .parrafo {
     width: 45em;
@@ -580,48 +583,55 @@ html {
 .box-type-tela {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    flex-wrap: wrap;
-    gap: 20px;
+    place-items: center;
 }
-.card-tela {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.card__article {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
+    overflow: hidden;
 }
 .box-tela-img {
-    width: 17.7em;
-    height: 20em;
+    width: 300px;
+    height: 350px;
     overflow: hidden;
-    border-radius: 10px;
-}
-.box-tela-img img {
-    object-fit: cover;
-    border-radius: 10px;
-    background-position: center;
-
-    transition: all 0.3s ease-in-out;
 }
 .descrip-tela {
-    width: 14em;
-    padding: 30px 20px;
-    color: white;
-    bottom: -60px;
-    position: absolute;
+    width: 250px;
     background-color: var(--main-color);
-    border-radius: 10px;
-    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .10);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 26px;
+    right: 0;
+    opacity: 0;
+
+    transition: opacity 1s 1s;
 }
+.descrip-tela .sub-h2,
 .descrip-tela .tittle-h2 {
     color: white;
     margin-bottom: 10px;
-    font-weight: 400;
+    font-weight: 100;
 }
 .descrip-tela .parrafito {
     color: lightgray;
 }
-
+.card__article:hover .descrip-tela{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+.card__article:hover {
+    animation: remove-overflow 2s forwards;
+}
+.card__article:not(:hover) {
+    animation: show-overflow 2s forwards;
+}
+.card__article:not(:hover) .descrip-tela{
+    animation: remove-data 1s forwards;
+}
 
 /* pie de pagina */
 .footer {
@@ -688,12 +698,7 @@ html {
 .enlaces li a:hover {
     color: var(--main-two-color);
 }
-.card-tela:hover .parrafito {
-    color: white;
-}
-.box-tela-img:hover img {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+.box-tela-img img:hover {
     filter: contrast(120%);
 }
 .container:hover {
@@ -719,6 +724,17 @@ html {
     display: block;
 }
 
+.sub-h2 {
+    color: white;
+    font-weight: 100;
+    font-family: var(--font-card);
+    font-size: var(--h2-font-size);
+}
+.sub-parrafo {
+    color: white;
+    font-family: var(--font-card);
+    font-size: var(--small-font-size);
+}
 .tittle-h2 {
     color: var(--main-two-color);
     font-size: 16px;
@@ -748,12 +764,48 @@ html {
     color: var(--main-color);
 }
 
+/* Card animation */
+@keyframes show-data {
+    50% {
+        transform: translateY(-10rem);
+    }
+    100% {
+        transform: translateY(-7rem);
+    }
+}
+@keyframes remove-overflow {
+    to {
+        overflow: initial;
+    }
+}
+@keyframes remove-data {
+    0% {
+        transform: translateY(-7rem);
+    }
+    50% {
+        transform: translateY(-10rem);
+    }
+    100% {
+        transform: translateY(.5rem);
+    }
+}
+@keyframes show-overflow {
+    0% {
+        overflow: initial;
+        pointer-events: none;
+    }
+    50% {
+        overflow: hidden;
+    }
+}
+
 button {
     cursor: pointer;
 }
 img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 a {
     text-decoration: none;

@@ -19,11 +19,12 @@
     width: 100%;
     display: grid;
     place-items: center;
-    background-image: linear-gradient(rgba(4, 5, 9, 0.5),
-    rgba(4, 5, 9, 0.5)), url('../pics/fond-our.jpg');
+    background-image: linear-gradient(rgba(4, 5, 9, 0.4),
+    rgba(4, 5, 9, 0.3)), url('../pics/fond-our.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
 }
 
 /* principal */
@@ -46,10 +47,15 @@
     align-items: center;
     height: 40rem;
     justify-content: space-evenly;
+    background-color: #F4F8FB;
 }
-
-.s4 {
+.s3 {
+    width: 100%;
     height: 40rem;
+    display: grid;
+    place-items: center;
+
+    background-color: var(--main-color);
 }
 
 /* components */
@@ -87,7 +93,6 @@
 }
 .card-slid {
     width: 8rem;
-    cursor: crosshair;
     overflow: hidden;
     border-radius: 20px;
 
@@ -135,16 +140,6 @@
 }
 
 /* s3 */
-
-.s3 {
-    width: 100%;
-    height: 40rem;
-    display: grid;
-    place-items: center;
-
-    background-color: var(--main-color);
-}
-
 .slide-container {
     width: 80rem;
     height: 40rem;
@@ -238,6 +233,23 @@
 #slider-span5:target ~ .image-slider {left: -25%}
 #slider-span6:target ~ .image-slider {left: -50%}
 #slider-span7:target ~ .image-slider {left: -70%}
+
+/*s4*/
+.s4 {
+    height: 40rem;
+    text-align: center;
+    background-color: #F4F8FB;
+}
+.s4 .tittle-h1 {
+    font-weight: 100;
+}
+.s4 .parrafo {
+    font-size: 20px;
+    width: 40rem;
+    margin-top: 15px;
+    text-align: center;
+}
+
 
 /* hover */
 .card-slid:hover .layer .info {

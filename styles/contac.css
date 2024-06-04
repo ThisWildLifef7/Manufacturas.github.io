@@ -5,8 +5,9 @@
     --main-two-color: #7AA93C;
     --color-hover-button: #388E3C;
 
-    --parrafo: "PT Sans";
-    --tittle: "PT Serif";
+    --font-card: "Poppins", sans-serif;
+    --h2-font-size: 1rem;
+    --small-font-size: 0.75rem;
 }
 
 .map {
@@ -32,7 +33,7 @@
     justify-content: space-evenly;
 }
 .card-contact {
-    width: 16rem;
+    width: 19rem;
     height: 130px;
     display: flex;
     align-items: center;
@@ -45,18 +46,15 @@
 .card-contact .subtitle {
     font-size: 14px;
 }
-.shortcard-info {
-    display: grid;
-    gap: 10px;
-}
 .shortcard-info .tittle-h2 {
     color: black;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'Roboto';
+    font-family: var(--font-card);
 }
-.shortcard-info li {
-    font-size: 14px;
+.shortcard-info .parrafo {
+    font-size: 13px;
+    margin-top: 5px;
 }
 
 .box-down-contact {
@@ -75,6 +73,8 @@
 }
 .formulario {
     padding: 25px 30px;
+    font-weight: 100;
+    font-family: var(--font-card);
 }
 .user-details {
     display: flex;
@@ -101,6 +101,7 @@
     border: 1px solid #ccc;
     padding-left: 15px;
     font-size: 16px;
+    font-family: var(--font-card);
 
     border-bottom-width: 2px;
     transition: all 0.3s ease;
@@ -112,7 +113,7 @@
     padding: 15px;
     outline: none;
     font-size: 16px;
-    font-family: var(--parrafo);
+    font-family: var(--font-card);
     border-radius: 5px;
     border: 1px solid #ccc;
 

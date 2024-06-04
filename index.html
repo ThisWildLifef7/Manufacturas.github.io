@@ -6,11 +6,27 @@
     <title>Manufacturas America EIRL</title>
     <link rel="icon" type="image/png" href="./pics/logo-man.png">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/326d6d93eb.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="principal principal--hidden">
+        <div class="generate-box__cube"> 
+            <div class="cubo">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="loading">
+                <div>
+                    <h1 class="load-h1">Cargando</h1>
+                    <p class="load-p">. . .</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="box-right">
             <nav class="nav-right">
@@ -240,6 +256,9 @@
                     <figure class="card-client">
                         <img src="./pics/marcas/trousseau.png" alt="trousseau">
                     </figure>
+                    <figure class="card-client">
+                        <img src="./pics/marcas/caprilina-letter.png" alt="caprilina">
+                    </figure>
                 </div>
             </div>
         </section>
@@ -296,7 +315,7 @@
             <article class="container-tela">
                 <div class="box-descrip-tela">
                     <h2 class="tittle-h2">NUESTROS PROYECTOS</h2>
-                    <h1 class="tittle-h1">Algunos de nuestros proyectos</h1>
+                    <h1 class="tittle-h1">Algunas telas elaboradas</h1>
                     <p class="parrafo">En Manufacturas América EIRL, nuestros proyectos están impulsados por la calidad. Utilizamos solo los mejores materiales para garantizar resultados excepcionales. Explora nuestra selección y descubre el estándar de excelencia en cada tejido.</p>
                 </div>
                 <div class="box-type-tela"> <!--container-->
@@ -317,7 +336,7 @@
                                 <img src="./pics/telas/t2.jpg" alt="t1">
                             </figure>
                             <div class="descrip-tela"> <!--card__data-->
-                                <h2 class="sub-h2">Tela Georgette</h2>
+                                <h2 class="sub-h2">Tela pima</h2>
                                 <p class="parrafo">Elegante y ligera. Ideal para prendas fluidas y femeninas.</p>
                             </div>
                         </article>
@@ -328,7 +347,7 @@
                                 <img src="./pics/telas/t3.jpg" alt="t1">
                             </figure>
                             <div class="descrip-tela"> <!--card__data-->
-                                <h2 class="sub-h2">Tela de lino</h2>
+                                <h2 class="sub-h2">Tela velour</h2>
                                 <p class="parrafo">Natural y fresco. Ideal para ropa de verano.</p>
                             </div>
                         </article>
@@ -339,7 +358,7 @@
                                 <img src="./pics/telas/t4.jpg" alt="t1">
                             </figure>
                             <div class="descrip-tela"> <!--card__data-->
-                                <h2 class="sub-h2">Tela de lana</h2>
+                                <h2 class="sub-h2">Tela jacquard</h2>
                                 <p class="parrafo">Cálida y duradera. Perfecta para prendas de invierno.</p>
                             </div>
                         </article>
@@ -350,7 +369,7 @@
                                 <img src="./pics/telas/t5.jpg" alt="t1">
                             </figure>
                             <div class="descrip-tela"> <!--card__data-->
-                                <h2 class="sub-h2">Tela de mezclilla</h2>
+                                <h2 class="sub-h2">Tela french terry</h2>
                                 <p class="parrafo">Clásica tela resistente para prendas informales.</p>
                             </div>
                         </article>
@@ -361,7 +380,7 @@
                                 <img src="./pics/telas/t6.jpg" alt="t1">
                             </figure>
                             <div class="descrip-tela"> <!--card__data-->
-                                <h2 class="sub-h2">Tela de rib</h2>
+                                <h2 class="sub-h2">Tela rib</h2>
                                 <p class="parrafo">Elastizada y texturizada. Ideal para detalles y ajuste.</p>
                             </div>
                         </article>
@@ -378,6 +397,7 @@
                     <img src="./pics/logotipo-reel.png" alt="logotipo">
                 </figure>
                 <p class="parrafo">Manufacturas América EIRL - Tu socio confiable en moda de calidad. Descubre nuestra pasión por la excelencia en cada prenda.</p>
+                <span><a class="job" href="./Screens/job.html">Trabaja con nosotros</a></span>
             </div>
             <div class="info-right f1">
                 <div class="box-enlaces">
@@ -404,5 +424,6 @@
         </div>
     </footer>
     <script src="./script.js"></script>
+    <script src="./js/loader.js"></script>
 </body>
 </html>

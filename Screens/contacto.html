@@ -77,29 +77,28 @@
                         <h2 class="tittle-h1">Ponerse en contacto!</h2>
                         <p class="parrafito">¡Hablemos! Estamos aquí para responder tus preguntas y comentarios. Completa el formulario o contáctanos directamente para obtener más información sobre nuestros productos y servicios, o para discutir cualquier consulta específica que puedas tener. Esperamos con interés trabajar contigo.</p>
                     </div>
-                    <form action="/" class="formulario" id="lookup" onsubmit="process(event)">
+                    <form action="https://formspree.io/f/myyrqllp" method="POST" class="formulario" id="lookup" onsubmit="process(event)">
                         <div class="user-details">
                             <div class="input-box">
                                 <label for="GET-name" class="details">Nombre:</label>
-                                <input type="text" id="GET-name" name="name" placeholder="Ingresa tu nombre" required>
+                                <input type="text" id="GET-name" name="user_name" placeholder="Ingresa tu nombre" required>
                             </div>
                             <div class="input-box">
                                 <label for="GET-apellido" class="details">Apellido:</label>
-                                <input type="text" id="GET-apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+                                <input type="text" id="GET-apellido" name="user_apellido" placeholder="Ingresa tu apellido" required>
                             </div>
                             <div class="input-box">
                                 <label for="GET-email" class="details">Email:</label>
-                                <input type="email" id="GET-email" name="email" placeholder="Ingresa tu email" required>
+                                <input type="email" id="GET-email" name="user_email" placeholder="Ingresa tu email" required>
                             </div>
                             <div class="input-box">
                                 <label for="phone" class="details">Teléfono:</label>
-                                <input type="tel" id="phone" name="phone" required>
+                                <input type="tel" id="phone" name="user_tel" required>
                             </div>
                             <div class="input-box-one">
                                 <label for="GET-mensaje" class="details">Mensaje:</label>
-                                <textarea cols="10"name="mensaje" id="GET-mensaje" placeholder="Escribe algo aqui..." required></textarea>
+                                <textarea cols="10" name="message" id="GET-mensaje" placeholder="Escribe algo aqui..." required></textarea>
                             </div>
-                            <div class="alert alert-info"></div>
                         </div>
                         <div class="box-button-form">
                             <button type="submit" class="initial-button" id="btn">Enviar</button>
@@ -116,7 +115,7 @@
                     <img src="../pics/logotipo-reel.png" alt="logotipo">
                 </figure>
                 <p class="parrafo">Manufacturas América EIRL - Tu socio confiable en moda de calidad. Descubre nuestra pasión por la excelencia en cada prenda.</p>
-                <span><a class="job" href="./Screens/job.html">Trabaja con nosotros</a></span>
+                <span><a class="job" href="./job.html">Trabaja con nosotros</a></span>
             </div>
             <div class="info-right f1">
                 <div class="box-enlaces">
@@ -143,5 +142,7 @@
         </div>
     </footer>
     <script src="../js/contacto.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init('NAvXsGPQqQBbP4iHY')</script>
 </body>
 </html>

@@ -22,7 +22,6 @@ body {
 }
 
 html {
-  font-size: 62.5;
   scroll-behavior: smooth;
 }
 
@@ -81,7 +80,6 @@ html {
 /* Segundo nav */
 .box-right {
   width: 100%;
-  height: 3.8em;
   position: fixed;
   top: 0;
   background-color: white;
@@ -91,7 +89,7 @@ html {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
-  width: 57rem;
+  width: 65rem;
 }
 
 .card-logo {
@@ -147,6 +145,22 @@ html {
 }
 .secondary .fa-chevron-down:hover {
   transform: rotateY(-180deg);
+}
+
+.icons-horizontal {
+  gap: 20px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  font-family: var(--font-card);
+}
+.icons-horizontal .fa-circle-user, .fa-cart-shopping {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.icons-horizontal li a:hover {
+  color: var(--main-two-color);
 }
 
 /* Bloque main */

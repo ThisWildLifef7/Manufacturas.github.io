@@ -4,12 +4,218 @@
     --main-color: #1F2F3F;
     --main-two-color: #7AA93C;
     --color-hover-button: #388E3C;
+    --color-fond-sec: #F4F8FB;
 
     --font-card: "Poppins", sans-serif;
     --h2-font-size: 1rem;
     --small-font-size: 0.75rem;
 }
 
-.sec-job {
-    
+.main {
+    margin-top: 61px;
+}
+
+.j1 {
+    width: 100%;
+    height: 30rem;
+    background-image:linear-gradient(rgba(4, 5, 9, 0.2), rgba(4, 5, 9, 0.3)), url('../pics/job.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.j2 {
+    width: 65rem;
+}
+.j3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--color-fond-sec);
+    width: 100%;
+    height: 10rem;
+    font-family: var(--font-card);
+}
+.j4 {
+    width: 65rem;
+}
+
+/**COMPONENTES
+/* j2 */
+.container-info__job {
+    margin-top: 30px;
+}
+.container-info__job .tittle-h1 {
+    width: 45rem;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid var(--main-color);
+    padding: 10px 0;
+    margin-bottom: 60px;
+    letter-spacing: 5px;
+}
+.box-info-job {
+    display: flex;
+    justify-content: center;
+}
+.card-person__photo {
+    width: 20rem;
+    padding: 40px;
+    margin-right: 25px;
+}
+.card-person__info > h2 {
+    font-weight: 500;
+    color: var(--main-two-color);
+}
+.card-person__info h2, .parr {
+    width: 33rem;
+    margin-bottom: 20px;
+}
+.card-person__info {
+    width: 35rem;
+    font-family: var(--font-card);
+}
+.info-beneficios > h4 {
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.info-beneficios li{
+    margin-left: 40px;
+    margin-bottom: 20px;
+    list-style: disc;
+}
+.info-beneficios li::marker {
+    color: var(--main-two-color);
+    font-size: 20px;
+}
+
+/* j3 */
+.j3 > h1 {
+    color: var(--main-color);
+    font-weight: 300;
+}
+.j3 > .parrafito {
+    font-size: 16px;
+}
+
+/* j4 */
+.formulario {
+    padding: 25px 30px;
+    font-weight: 100;
+    font-family: var(--font-card);
+}
+.user-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.input-box {
+    margin-bottom: 5px;
+    width: calc(100% / 2 - 20px);
+}
+.input-box-file {
+    width: calc(96% / 2);
+    height: 4.7rem;
+    position: relative;
+}
+.input-box-one {
+    width: calc(100% / 1);
+}
+.details {
+    display: block;
+    font-weight: 500;
+    margin: 20px 0 12px 0;
+}
+.input-box input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    font-family: var(--font-card);
+
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.input-box-one textarea {
+    width: 100%;
+    height: 10rem;
+    resize: none;
+    padding: 15px;
+    outline: none;
+    font-size: 16px;
+    font-family: var(--font-card);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden; 
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    max-width: 100%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    background: var(--main-two-color);
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.iborrainputfile {
+	font-size: 16px; 
+	font-weight: normal;
+}
+
+.inputfile-3:focus + label,
+.inputfile-3.has-focus + label,
+.inputfile-3 + label:hover {
+    background-color: var(--color-hover-button);
+}
+
+
+.box-button-form {
+    margin: 20px 0;
+}
+.box-button-form button {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+/* form input */
+.input-box input:focus {
+    border-color: var(--main-two-color);
+}
+.input-box-one textarea:is(:focus, :valid) {
+    border-color: var(--main-two-color);
 }

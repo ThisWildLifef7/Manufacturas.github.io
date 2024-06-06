@@ -1,5 +1,6 @@
 const phoneInputField = document.querySelector("#phone");
 const btn = document.getElementById('btn');
+const form = document.getElementById('lookup')
 
 window.intlTelInput(phoneInputField, {
   initialCountry: "auto",
@@ -14,8 +15,7 @@ window.intlTelInput(phoneInputField, {
     "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/utils.js",
 });
 
-document.getElementById('lookup')
- .addEventListener('submit', function(event) {
+form.addEventListener('submit', function(event) {
    event.preventDefault();
 
    btn.value = 'Enviando...';
@@ -33,3 +33,8 @@ document.getElementById('lookup')
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  form.addEventListener('submit', function () {
+      form.reset();
+  })
+})

@@ -1,0 +1,39 @@
+@import url('../styles/style.css');
+:root {
+  --main-color: #1f2f3f;
+  --main-two-color: #7aa93c;
+  --color-hover-button: #388e3c;
+  --body-fond-color: #fefbf7;
+
+  --font-card: "Poppins", sans-serif;
+  --h2-font-size: 1rem;
+  --small-font-size: 0.75rem;
+}
+
+.main-login {
+  display: flex;
+}
+
+.frame-login {
+  border: solid red;
+}
+.fr1 {
+  border: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: var(--font-card);
+  width: 50vw;
+  height: 100vh;
+  background-color: var(--main-color);
+}
+.fr1 > h1 {
+  width: 25rem;
+  font-weight: 500;
+  font-size: 50px;
+}
+.fr2 {
+  width: 50vw;
+}

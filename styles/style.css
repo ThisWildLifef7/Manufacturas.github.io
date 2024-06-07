@@ -86,10 +86,10 @@ html {
   z-index: 5;
 }
 .nav-right {
+  width: 67rem;
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
-  width: 65rem;
 }
 
 .card-logo {
@@ -124,7 +124,7 @@ html {
 .menu-vertical {
   position: absolute;
   display: none;
-  bottom: -240.7px;
+  bottom: -240px;
   width: 130px;
   height: 240px;
   border-top: 3px solid var(--main-two-color);
@@ -148,6 +148,7 @@ html {
 }
 
 .icons-horizontal {
+  position: relative;
   gap: 20px;
   display: flex;
   padding: 10px;
@@ -157,6 +158,21 @@ html {
 .icons-horizontal .fa-circle-user, .fa-cart-shopping {
   margin-right: 5px;
   font-size: 20px;
+}
+.icons-vertical {
+  position: absolute;
+  display: none;
+  bottom: -42px;
+  width: 143px;
+  height: 42px;
+  border-top: 3px solid var(--main-two-color);
+  background-color: var(--main-color);
+}
+.icons-vertical li a {
+  display: block;
+  padding: 6.2px;
+  color: white;
+  border-bottom: 0.5px solid #757575;
 }
 
 .icons-horizontal li a:hover {
@@ -845,6 +861,10 @@ html {
   color: var(--main-two-color);
 }
 .menu-horizontal li:hover .menu-vertical {
+  display: block;
+}
+
+.icons-horizontal li:hover .icons-vertical {
   display: block;
 }
 

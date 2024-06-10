@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/tienda.css">
     <link rel="icon" type="image/png" href="../pics/logo-man.png">
     <script src="https://kit.fontawesome.com/326d6d93eb.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
@@ -29,36 +30,124 @@
                             <li><a href="./process.html#despacho">Despacho</a></li>
                         </ul>
                     </li>
-                    <li><a class="primary" href="../Screens/tienda.html">Tienda</a></li>
+                    <li><a class="primary" href="#">Tienda</a></li>
                     <li><a class="primary" href="../Screens/contacto.html">Contáctenos</a></li>
                 </ul>
                 <ul class="icons-horizontal">
                     <li>
                         <a class="secondary" href="../Screens/login.html"><i class="fa-solid fa-circle-user"></i>Iniciar sesión</a>
                     </li>
-                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Carrito</a></li>
+                    <li>
+                        <a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i>Carrito</a>
+                        <div class="cart">
+                            <h2 class="cart-title">Tu carrito</h2>
+                            <!--Content-->
+                            <div class="cart-content">
+                                <div class="cart-box">
+                                    <img src="../pics/nos3.jpg" alt="" class="cart-img">
+                                    <div class="detail-box">
+                                        <div class="cart-product-title">Earbuds</div>
+                                        <div class="cart-price">$25</div>
+                                        <input type="number" value="1" class="cart-quantity">
+                                    </div>
+                                    <!--Remove cart-->
+                                    <i class='bx bxs-trash-alt cart-remove'></i>
+                                </div>
+                            </div>
+                            <!--Total-->
+                            <div class="total">
+                                <div class="total-title">Total:</div>
+                                <div class="total-price">$0</div>
+                            </div>
+                            <!--Buy button-->
+                            <button type="button" class="btn-buy">Buy now</button>
+                            <!--Cart close-->
+                            <i class='bx bx-x' id="close-cart"></i>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main>
-        <div class="context">
-            <h1>Manufacturas America</h1>
-        </div>
-        <div class="area" >
-            <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>        
-        </div >
+    <main class="main-tienda">
+        <section class="shop container-card"><!--shop container-->
+            <h2 class="section-title">Venta de productos</h2>
+            <!--Content-->
+            <div class="shop-content">
+                <div class="product-box">
+                    <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
+                    <h2 class="product-title">Enterizo con cierre</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="../pics/fond-textil.jpg" alt="ropa" class="product-img">
+                    <h2 class="product-title">Enterizo con cierre</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
+                    <h2 class="product-title">Enterizo con cierre</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
+                    <h2 class="product-title">Enterizo con cierre</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
+                    <h2 class="product-title">Enterizo con cierre</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
+                    <h2 class="product-title">Enterizo con cierre</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
+                    <h2 class="product-title">Enterizo con cierre</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
+                    <h2 class="product-title">Enterizo con cierre</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
+                    <h2 class="product-title">Enterizo con cierre</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
+                    <h2 class="product-title">Enterizo con cierre</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
+                    <h2 class="product-title">Enterizo con cierre</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <div class="product-box">
+                    <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
+                    <h2 class="product-title">Enterizo con cierre</h2>
+                    <span class="price">$25</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <article class="container-footer">
@@ -93,5 +182,6 @@
             <li class="parrafito">Copyright 2024 © All Right Reserved Design by Eustass</li>
         </div>
     </footer>
+    <script src="../js/tienda.js"></script>
 </body>
 </html>

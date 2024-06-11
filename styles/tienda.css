@@ -123,15 +123,17 @@ html {
 .icons-horizontal li:hover .icons-vertical {
   display: block;
 }
-.main-tienda {
-    margin-top: 61px;
-}
 
+.main-tienda {
+    display: grid;
+    place-items: center;
+    margin-top: 60px;
+}
 .section-title {
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 .shop {
     margin-top: 1rem;
@@ -142,8 +144,10 @@ html {
 /*Shop content*/
 .shop-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-    gap: 2rem;
+    width: 71rem;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
 }
 .product-img {
     object-fit: cover;

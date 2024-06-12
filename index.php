@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,24 +12,6 @@
     <script src="https://kit.fontawesome.com/326d6d93eb.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="principal principal--hidden">
-        <div class="generate-box__cube"> 
-            <div class="cubo">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="loading">
-                <div>
-                    <h1 class="load-h1">Cargando</h1>
-                    <p class="load-p">. . .</p>
-                </div>
-            </div>
-        </div>
-    </div>
     <header class="header">
         <div class="box-right">
             <nav class="nav-right">
@@ -35,24 +20,34 @@
                 </figure>
                 <ul class="menu-horizontal">
                     <li><a class="primary" href="#">Inicio</a></li>
-                    <li><a class="primary" href="./Screens/nosotros.html">Nosotros</a></li>
+                    <li><a class="primary" href="./Screens/nosotros.php">Nosotros</a></li>
                     <li>
                         <a class="secondary" href="#procesos">Procesos<i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="menu-vertical">
-                            <li><a href="./Screens/process.html#desarrollo">Desarrollo</a></li>
-                            <li><a href="./screens/process.html#bordado">Bordado</a></li>
-                            <li><a href="./Screens/process.html#corte">Corte</a></li>
-                            <li><a href="./Screens/process.html#costura">Costura</a></li>
-                            <li><a href="./Screens/process.html#acabados">Acabados</a></li>
-                            <li><a href="./Screens/process.html#despacho">Despacho</a></li>
+                            <li><a href="./Screens/process.php#desarrollo">Desarrollo</a></li>
+                            <li><a href="./screens/process.php#bordado">Bordado</a></li>
+                            <li><a href="./Screens/process.php#corte">Corte</a></li>
+                            <li><a href="./Screens/process.php#costura">Costura</a></li>
+                            <li><a href="./Screens/process.php#acabados">Acabados</a></li>
+                            <li><a href="./Screens/process.php#despacho">Despacho</a></li>
                         </ul>
                     </li>
-                    <li><a class="primary" href="./Screens/tienda.html">Tienda</a></li>
-                    <li><a class="primary" href="./Screens/contacto.html">Contáctenos</a></li>
+                    <li><a class="primary" href="./Screens/tienda.php">Tienda</a></li>
+                    <li><a class="primary" href="./Screens/contacto.php">Contáctenos</a></li>
                 </ul>
                 <ul class="icons-horizontal">
                     <li>
-                        <a class="secondary" href="./Screens/login.html"><i class="fa-solid fa-circle-user"></i>Iniciar sesión</a>
+                        <a class="secondary" href="#">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <?php
+                                if (isset($_SESSION['nombre_usuario'])) {
+                                    echo htmlspecialchars($_SESSION['nombre_usuario']);
+                                }
+                            ?>
+                        </a>
+                        <ul class="icons-vertical">
+                            <li><a href="./php/logout.php">Cerrar sesión</a></li>
+                        </ul>
                     </li>
                     <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Carrito</a></li>
                 </ul>
@@ -83,7 +78,7 @@
                     <p class="parrafo">Desde nuestros procesos de producción hasta nuestras ultimas colecciones, te invitamos a explorar como hacemos posible la moda de calidad con pasión y compromiso</p>
                 </div>
                 <div class="descrip-right">
-                    <button class="initial-button" type="button" onclick="location.href='./Screens/nosotros.html'">DESCUBRE MAS</button>
+                    <button class="initial-button" type="button" onclick="location.href='./Screens/nosotros.php'">DESCUBRE MAS</button>
                 </div>
                 <div class="card-info">
                     <div class="card">
@@ -180,7 +175,7 @@
                     <h2 class="subtitle">Bordados</h2>
                     <div class="descrip-area">
                         <p class="parrafo">Ofrecemos el diseño, desarrollo y producción de diferentes tipos de bordados con máquinas de alta precisión orientados al mercado infantil</p>
-                        <a href="./Screens/process.html#bordado">LEER MÁS <i class="fa-regular fa-circle-right"></i></a>
+                        <a href="./Screens/process.php#bordado">LEER MÁS <i class="fa-regular fa-circle-right"></i></a>
                     </div>
                 </div>
                 <div class="container">
@@ -190,7 +185,7 @@
                     <h2 class="subtitle">Corte</h2>
                     <div class="descrip-area">
                         <p class="parrafo">La sala de corte cuenta con personal altamente calificado; con equipos y maquinarias que priorizan la seguridad de nuestros colaboradores</p>
-                        <a href="./Screens/process.html#corte">LEER MÁS <i class="fa-regular fa-circle-right"></i></a>
+                        <a href="./Screens/process.php#corte">LEER MÁS <i class="fa-regular fa-circle-right"></i></a>
                     </div>
                 </div>
                 <div class="container">
@@ -200,7 +195,7 @@
                     <h2 class="subtitle">Costura</h2>
                     <div class="descrip-area">
                         <p class="parrafo">Nuestro proceso de costura se realiza bajo un sistema modular, permitiéndonos atender pedidos variados con rapidez y flexibilidad.</p>
-                        <a href="./Screens/process.html#costura">LEER MÁS <i class="fa-regular fa-circle-right"></i></a>
+                        <a href="./Screens/process.php#costura">LEER MÁS <i class="fa-regular fa-circle-right"></i></a>
                     </div>
                 </div>
                 <div class="container">
@@ -210,7 +205,7 @@
                     <h2 class="subtitle">Acabados</h2>
                     <div class="descrip-area">
                         <p class="parrafo">A fin de asegurar un producto de alta calidad realizamos un riguroso control final de cada prenda</p>
-                        <a href="./Screens/process.html#acabado">LEER MÁS <i class="fa-regular fa-circle-right"></i></a>
+                        <a href="./Screens/process.php#acabado">LEER MÁS <i class="fa-regular fa-circle-right"></i></a>
                     </div>
                 </div>
                 <div class="container">
@@ -220,7 +215,7 @@
                     <h2 class="subtitle">Despacho</h2>
                     <div class="descrip-area">
                         <p class="parrafo">Nos encargamos de organizar y gestionar la distribución de los productos textiles a clientes y puntos de venta</p>
-                        <a href="./Screens/process.html#despacho">LEER MÁS <i class="fa-regular fa-circle-right"></i></a>
+                        <a href="./Screens/process.php#despacho">LEER MÁS <i class="fa-regular fa-circle-right"></i></a>
                     </div>
                 </div>
                 <div class="container">
@@ -230,7 +225,7 @@
                     <h2 class="subtitle">Desarrollo</h2>
                     <div class="descrip-area">
                         <p class="parrafo">Nos enfocamos en la creación y mejora de los productos textiles, el diseño de nuevos tejidos, patrones y acabados</p>
-                        <a href="./Screens/process.html#desarrollo">LEER MÁS <i class="fa-regular fa-circle-right"></i></a>
+                        <a href="./Screens/process.php#desarrollo">LEER MÁS <i class="fa-regular fa-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -314,7 +309,7 @@
             <article class="container-contc">
                 <h1 class="tittle-h1">Consulta con nosotros el material adecuado para tu proyecto.</h1>
                 <p class="parrafito">¡Hablemos! En Manufacturas América EIRL, estamos aquí para responder cualquier pregunta que tengas. Completa el formulario o contáctanos directamente. Esperamos saber de ti pronto.</p>
-                <button type="button" class="initial-button" onclick="location.href='./Screens/contacto.html'">CONTACTENOS</button>
+                <button type="button" class="initial-button" onclick="location.href='./Screens/contacto.php'">CONTACTENOS</button>
             </article>
         </section>
         <section class="eight-part">
@@ -403,16 +398,16 @@
                     <img src="./pics/logotipo-reel.png" alt="logotipo">
                 </figure>
                 <p class="parrafo">Manufacturas América EIRL - Tu socio confiable en moda de calidad. Descubre nuestra pasión por la excelencia en cada prenda.</p>
-                <span><a class="job" href="./Screens/job.html">Trabaja con nosotros</a></span>
+                <span><a class="job" href="./Screens/job.php">Trabaja con nosotros</a></span>
             </div>
             <div class="info-right f1">
                 <div class="box-enlaces">
                     <h2>Enlaces rápidos</h2>
                     <ul class="enlaces">
                         <li><a href="#"><i class="fa-regular fa-circle-right"></i>Inicio</a></li>
-                        <li><a href="#nosotros"><i class="fa-regular fa-circle-right"></i>Nosotros</a></li>
-                        <li><a href="../Screens/tienda.html"><i class="fa-regular fa-circle-right"></i>Tienda</a></li>
-                        <li><a href="../Screens/contacto.html"><i class="fa-regular fa-circle-right"></i>Contáctenos</a></li>
+                        <li><a href="../Screens/nosotros.php"><i class="fa-regular fa-circle-right"></i>Nosotros</a></li>
+                        <li><a href="../Screens/tienda.php"><i class="fa-regular fa-circle-right"></i>Tienda</a></li>
+                        <li><a href="../Screens/contacto.php"><i class="fa-regular fa-circle-right"></i>Contáctenos</a></li>
                     </ul>
                 </div>
                 <div class="box-enlaces">
@@ -430,6 +425,5 @@
         </div>
     </footer>
     <script src="./script.js"></script>
-    <script src="./js/loader.js"></script>
 </body>
 </html>

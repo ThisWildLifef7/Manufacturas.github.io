@@ -3,7 +3,7 @@ session_start();
 include 'conexion.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usuario = $_POST['usuario'];
+    $usuario = $_POST['nombre_usuario'];
     $contraseña = $_POST['contraseña'];
 
     // Consulta para verificar las credenciales del usuario
@@ -14,11 +14,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Inicio de sesión exitoso
         $row = $result->fetch_assoc();
         $_SESSION['nombre_usuario'] = $row['nombre_completo'];
-        header("Location: index.php");
+        header("Location: ../index.php");
+        exit();
     } else {
         // Credenciales incorrectas, redirigir de nuevo al formulario de inicio de sesión con un mensaje de error
-        header("Location: login.php?error=1");
-        exit;
+        header("Location: ../Screens/login.php?error=1");
+        exit();
     }
 }
+// Cerrar conexión
+$stmt->close();
+$conn->close();
 ?>

@@ -101,6 +101,21 @@ html {
   align-items: center;
   font-family: var(--font-card);
 }
+.icons-vertical {
+  height: 40px;
+  bottom: -40px;
+  position: absolute;
+  display: none;
+  width: 135px;
+  border-top: 3px solid var(--main-two-color);
+  background-color: var(--main-color);
+}
+.icons-vertical li a {
+  display: block;
+  padding: 6.2px;
+  color: white;
+  border-bottom: 0.5px solid #757575;
+}
 .icons-horizontal .fa-circle-user, .fa-cart-shopping {
   margin-right: 5px;
   font-size: 20px;

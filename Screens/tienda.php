@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,25 +20,35 @@
                     <img class="img" src="../pics/logotipo.png" alt="logo">
                 </figure>
                 <ul class="menu-horizontal">
-                    <li><a class="primary" href="../index.html#">Inicio</a></li>
-                    <li><a class="primary" href="./nosotros.html">Nosotros</a></li>
+                    <li><a class="primary" href="../index.php#">Inicio</a></li>
+                    <li><a class="primary" href="./nosotros.php">Nosotros</a></li>
                     <li>
-                        <a class="secondary" href="../index.html#procesos">Procesos<i class="fa-solid fa-chevron-down"></i></a>
+                        <a class="secondary" href="../index.php#procesos">Procesos<i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="menu-vertical">
-                            <li><a href="./process.html#">Desarrollo</a></li>
-                            <li><a href="./process.html#bordado">Bordado</a></li>
-                            <li><a href="./process.html#corte">Corte</a></li>
-                            <li><a href="./process.html#costura">Costura</a></li>
-                            <li><a href="./process.html#acabados">Acabados</a></li>
-                            <li><a href="./process.html#despacho">Despacho</a></li>
+                            <li><a href="./process.php#">Desarrollo</a></li>
+                            <li><a href="./process.php#bordado">Bordado</a></li>
+                            <li><a href="./process.php#corte">Corte</a></li>
+                            <li><a href="./process.php#costura">Costura</a></li>
+                            <li><a href="./process.php#acabados">Acabados</a></li>
+                            <li><a href="./process.php#despacho">Despacho</a></li>
                         </ul>
                     </li>
                     <li><a class="primary" href="#">Tienda</a></li>
-                    <li><a class="primary" href="../Screens/contacto.html">Contáctenos</a></li>
+                    <li><a class="primary" href="../Screens/contacto.php">Contáctenos</a></li>
                 </ul>
                 <ul class="icons-horizontal">
                     <li>
-                        <a class="secondary" href="../Screens/login.html"><i class="fa-solid fa-circle-user"></i>Iniciar sesión</a>
+                        <a class="secondary" href="#">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <?php
+                                if (isset($_SESSION['nombre_usuario'])) {
+                                    echo htmlspecialchars($_SESSION['nombre_usuario']);
+                                }
+                            ?>
+                        </a>
+                        <ul class="icons-vertical">
+                            <li><a href="../php/logout.php">Cerrar sesión</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i>Carrito</a>
@@ -147,16 +160,16 @@
                     <img src="../pics/logotipo-reel.png" alt="logotipo">
                 </figure>
                 <p class="parrafo">Manufacturas América EIRL - Tu socio confiable en moda de calidad. Descubre nuestra pasión por la excelencia en cada prenda.</p>
-                <span><a class="job" href="./job.html">Trabaja con nosotros</a></span>
+                <span><a class="job" href="./job.php">Trabaja con nosotros</a></span>
             </div>
             <div class="info-right f1">
                 <div class="box-enlaces">
                     <h2>Enlaces rápidos</h2>
                     <ul class="enlaces">
-                        <li><a href="../index.html#"><i class="fa-regular fa-circle-right"></i>Inicio</a></li>
-                        <li><a href="../index.html#nosotros"><i class="fa-regular fa-circle-right"></i>Nosotros</a></li>
-                        <li><a href="../Screens/tienda.html"><i class="fa-regular fa-circle-right"></i>Tienda</a></li>
-                        <li><a href="../Screens/contacto.html"><i class="fa-regular fa-circle-right"></i>Contáctenos</a></li>
+                        <li><a href="../index.php#"><i class="fa-regular fa-circle-right"></i>Inicio</a></li>
+                        <li><a href="../Screens/nosotros.php"><i class="fa-regular fa-circle-right"></i>Nosotros</a></li>
+                        <li><a href="../Screens/tienda.php"><i class="fa-regular fa-circle-right"></i>Tienda</a></li>
+                        <li><a href="../Screens/contacto.php"><i class="fa-regular fa-circle-right"></i>Contáctenos</a></li>
                     </ul>
                 </div>
                 <div class="box-enlaces">

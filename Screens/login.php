@@ -34,6 +34,14 @@ header("Expires: 0");
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="Contraseña" name="contraseña" required/>
                     </div>
+                    <div class="content-select">
+                        <select name="tipo_usuario" required>
+                            <option value="" disabled selected>Tipo de Usuario</option>
+                            <option value="administrador">Administrador</option>
+                            <option value="cliente">Cliente</option>
+                        </select>
+                        <i></i>
+                    </div>
                     <input type="submit" value="Ingresar" class="btn solid" />
                     <p class="social-text">O inicie sesión con estas plataformas</p>
                     <div class="social-media">
@@ -88,10 +96,9 @@ header("Expires: 0");
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>¿Nuevo aquí?</h3>
+                    <h3>¿Aún no tienes cuenta?</h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-                        ex ratione. Aliquid!
+                        ¡Registrate hoy y disfruta de nuestros productos!
                     </p>
                     <button class="btn transparent" id="sign-up-btn">
                         Crear cuenta
@@ -101,10 +108,9 @@ header("Expires: 0");
             </div>
             <div class="panel right-panel">
                 <div class="content">
-                    <h3>Uno de nosotros?</h3>
+                    <h3>¡Bienvenido(a)!</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                        laboriosam ad deleniti.
+                        Parece que ya tienes una cuenta con nosotros. ¡Nos alegra verte de nuevo!
                     </p>
                     <button class="btn transparent" id="sign-in-btn">
                         Iniciar sesión

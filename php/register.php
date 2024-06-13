@@ -8,9 +8,11 @@ $password = $_POST['contraseña'];
 
 //hashear la contraseña
 // $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+//Definir tipo de usuario por defecto
+$tipo_usuario = 'cliente';
 
 //Insertar un nuevo usuario en la base de datos
-$sql = "INSERT INTO usuarios (nombre_completo, nombre_usuario, contraseña) VALUES (?, ?, ?)";
+$sql = "INSERT INTO usuarios (nombre_completo, nombre_usuario, contraseña, tipo_usuario) VALUES (?, ?, ?, '$tipo_usuario')";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("sss", $name, $username, $password);
 

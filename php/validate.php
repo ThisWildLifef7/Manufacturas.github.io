@@ -1,28 +1,50 @@
 <?php
 session_start();
-include 'conexion.php';
+require 'conexion.php'; // Asegúrate de que este archivo existe y contiene la conexión a la base de datos
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usuario = $_POST['nombre_usuario'];
+if (isset($_POST['nombre_usuario']) && isset($_POST['contraseña'])) {
+    $nombre_usuario = $_POST['nombre_usuario'];
     $contraseña = $_POST['contraseña'];
 
-    // Consulta para verificar las credenciales del usuario
-    $sql = "SELECT * FROM usuarios WHERE nombre_usuario = '$usuario' AND contraseña = '$contraseña'";
-    $result = $conn->query($sql);
+    // Preparar la consulta SQL para evitar inyecciones SQL
+    $stmt = $conn->prepare("SELECT id, nombre_completo, tipo_usuario FROM usuarios WHERE nombre_usuario = ? AND contraseña = ?");
+    $stmt->bind_param("ss", $nombre_usuario, $contraseña);
+    $stmt->execute();
+    $stmt->store_result();
 
-    if ($result->num_rows == 1) {
-        // Inicio de sesión exitoso
-        $row = $result->fetch_assoc();
-        $_SESSION['nombre_usuario'] = $row['nombre_completo'];
-        header("Location: ../index.php");
-        exit();
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($id, $nombre_completo, $tipo_usuario);
+        $stmt->fetch();
+
+        // Guardar datos del usuario en la sesión
+        $_SESSION['id'] = $id;
+        $_SESSION['nombre_completo'] = $nombre_completo;
+        $_SESSION['nombre_usuario'] = $nombre_usuario;
+        $_SESSION['tipo_usuario'] = $tipo_usuario;
+
+        // Redireccionar según el tipo de usuario
+        if ($tipo_usuario == 'administrador') {
+            header("Location: ../Screens/dashboard.php");
+        } else if ($tipo_usuario == 'cliente') {
+            // Verificar si un cliente está intentando acceder como administrador
+            if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 'administrador') {
+                header("Location: ../Screens/acceso_denegado.html");
+            } else {
+                header("Location: ../index.php");
+            }
+        } else {
+            // Otro tipo de usuario (maneja según tus necesidades)
+            header("Location: ../index.php");
+        }
     } else {
-        // Credenciales incorrectas, redirigir de nuevo al formulario de inicio de sesión con un mensaje de error
+        // Redireccionar con mensaje de error si las credenciales son incorrectas
         header("Location: ../Screens/login.php?error=1");
-        exit();
     }
+
+    // Cerrar la declaración y la conexión
+    $stmt->close();
+    $conn->close();
+} else {
+    header("Location: ../Screens/login.php");
 }
-// Cerrar conexión
-$stmt->close();
-$conn->close();
 ?>

@@ -107,6 +107,53 @@ form.sign-in-form {
   font-size: 1.1rem;
   color: #333;
 }
+.content-select {
+  max-width: 250px;
+  width: 100%;
+  position: relative;
+}
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.content-select select::-ms-expand {
+    display: none;
+}
+.content-select select {
+  width: 100%;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 9px 20px;
+  margin: 10px 0;
+  height: 55px;
+  outline: 0;
+  border: 0;
+  background: #f0f0f0;
+  color: #7b7b7b;
+  font-size: 1.1rem;
+  font-family: var(--font-card);
+  color: #999;
+  border-radius: 55px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+.content-select i{
+	position: absolute;
+	right: 20px;
+	top: calc(50% - 13px);
+	width: 16px;
+	height: 16px;
+	display: block;
+	border-left:4px solid #acacac;
+	border-bottom:4px solid #acacac;
+	transform: rotate(-45deg); 
+	transition: all 0.25s ease;
+}
+ 
+.content-select:hover i{
+	margin-top: 3px;
+}
 
 .input-field input::placeholder {
   color: #aaa;
@@ -414,6 +461,8 @@ form.sign-in-form {
 .error-message {
     color: red;
     margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
 }
 
 /* Estilos para el enlace de registro */

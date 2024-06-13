@@ -1,0 +1,33 @@
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor sin deformarla */
+  border-radius: 50%;
+  border: 3px solid #ddd; /* Borde alrededor de la imagen */
+}
+.file-input {
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.file-input input[type="file"] {
+  position: absolute;
+  font-size: 20px;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+.file-input label {
+  display: block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+.file-input label:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor */
+}
+

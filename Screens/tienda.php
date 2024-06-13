@@ -41,8 +41,8 @@ session_start();
                         <a class="secondary" href="#">
                             <i class="fa-solid fa-circle-user"></i>
                             <?php
-                                if (isset($_SESSION['nombre_usuario'])) {
-                                    echo htmlspecialchars($_SESSION['nombre_usuario']);
+                                if (isset($_SESSION['nombre_completo'])) {
+                                    echo htmlspecialchars($_SESSION['nombre_completo']);
                                 }
                             ?>
                         </a>

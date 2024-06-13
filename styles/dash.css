@@ -1,0 +1,9 @@
+:root {
+    --main-color: #1F2F3F;
+    --main-two-color: #7AA93C;
+    --color-hover-button: #388E3C;
+
+    --font-card: "Poppins", sans-serif;
+    --h2-font-size: 1rem;
+    --small-font-size: 0.75rem;
+}

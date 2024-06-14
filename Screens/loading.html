@@ -1,27 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading</title>
-    <link rel="stylesheet" href="../styles/loading.css">
+    <title>Modificar Perfil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .file-input {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .file-input input[type=file] {
+            position: absolute;
+            font-size: 100px;
+            opacity: 0;
+            right: 0;
+            top: 0;
+        }
+
+        .file-input label {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .file-input label:hover {
+            background-color: #0056b3;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: #f8f9fa;
+            border-color: #dee2e6 #dee2e6 #f8f9fa;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="generate-box__cube"> <!--container-->
-        <div class="cubo">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="loading">
-            <div>
-                <h1>Cargando</h1>
-                <p>. . .</p>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#account" data-toggle="tab">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#security" data-toggle="tab">Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#info" data-toggle="tab">Info</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="account">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                Modificar Perfil
+                            </div>
+                            <div class="card-body">
+                                <form action="procesar_modificacion.php" method="POST" enctype="multipart/form-data">
+                                    <input type="hidden" name="id_usuario" value="1">
+                                    <div class="text-center">
+                                        <img id="preview-img" src="placeholder.jpg" alt="Imagen de perfil"
+                                            class="profile-img">
+                                    </div>
+                                    <div class="form-group file-input">
+                                        <label for="imagen_perfil">Upload New Photo</label>
+                                        <input type="file" id="imagen_perfil" name="imagen_perfil"
+                                            onchange="previewImage()">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nombre_usuario">Username</label>
+                                        <input type="text" class="form-control" id="nombre_usuario"
+                                            name="nombre_usuario" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nombre_completo">Name</label>
+                                        <input type="text" class="form-control" id="nombre_completo"
+                                            name="nombre_completo" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="correo">Email</label>
+                                        <input type="email" class="form-control" id="correo" name="correo">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telefono">Phone</label>
+                                        <input type="text" class="form-control" id="telefono" name="telefono">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="direccion">Address</label>
+                                        <textarea class="form-control" id="direccion" name="direccion"
+                                            rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="status">Status</label>
+                                        <select class="form-control" id="status" name="status">
+                                            <option value="active">Active</option>
+                                            <option value="inactive">Inactive</option>
+                                        </select>
+                                    </div>
+                                    <div class="alert alert-warning">
+                                        <strong>Your email is not confirmed.</strong> Please check your inbox.
+                                        <a href="#" class="alert-link">Resend Confirmation</a>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                        <button type="reset" class="btn btn-secondary">Reset</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="security">
+                        <!-- Security tab content -->
+                    </div>
+                    <div class="tab-pane fade" id="info">
+                        <!-- Info tab content -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function previewImage() {
+            const file = document.querySelector('#imagen_perfil').files[0];
+            const reader = new FileReader();
+
+            reader.onloadend = function () {
+                document.querySelector('#preview-img').src = reader.result;
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 </body>
+
 </html>

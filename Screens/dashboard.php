@@ -43,7 +43,7 @@
                                 Opciones
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="../Screens/perfil.php">Perfil</a>
+                                <a class="dropdown-item" href="./perfil.php">Perfil</a>
                                 <a class="dropdown-item" href="#">Configuración</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="../php/logout.php">Cerrar Sesión</a>

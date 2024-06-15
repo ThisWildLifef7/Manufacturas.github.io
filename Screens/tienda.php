@@ -60,7 +60,6 @@ $result = mysqli_query($conn, "SELECT * FROM productos");
                             <h2 class="cart-title">Tu carrito</h2>
                             <!--Content-->
                             <div class="cart-content">
-                                
                             </div>
                             <!--Total-->
                             <div class="total">

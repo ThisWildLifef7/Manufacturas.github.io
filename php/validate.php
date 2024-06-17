@@ -7,7 +7,7 @@ if (isset($_POST['nombre_usuario']) && isset($_POST['contraseña'])) {
     $contraseña = $_POST['contraseña'];
 
     // Preparar la consulta SQL para evitar inyecciones SQL
-    $stmt = $conn->prepare("SELECT id, nombre_completo, tipo_usuario FROM usuarios WHERE nombre_usuario = ? AND contraseña = ?");
+    $stmt = $conn->prepare("SELECT usuario_id, nombre_completo, tipo_usuario FROM usuarios WHERE nombre_usuario = ? AND contraseña = ?");
     $stmt->bind_param("ss", $nombre_usuario, $contraseña);
     $stmt->execute();
     $stmt->store_result();
@@ -17,7 +17,7 @@ if (isset($_POST['nombre_usuario']) && isset($_POST['contraseña'])) {
         $stmt->fetch();
 
         // Guardar datos del usuario en la sesión
-        $_SESSION['id'] = $id;
+        $_SESSION['usuario_id'] = $id;
         $_SESSION['nombre_completo'] = $nombre_completo;
         $_SESSION['nombre_usuario'] = $nombre_usuario;
         $_SESSION['tipo_usuario'] = $tipo_usuario;
@@ -28,7 +28,7 @@ if (isset($_POST['nombre_usuario']) && isset($_POST['contraseña'])) {
         } else if ($tipo_usuario == 'cliente') {
             // Verificar si un cliente está intentando acceder como administrador
             if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 'administrador') {
-                header("Location: ../Screens/acceso_denegado.html");
+                header("Location: ../Screens/acceso_denegado.php");
             } else {
                 header("Location: ../index.php");
             }

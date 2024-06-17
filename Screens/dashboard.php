@@ -1,26 +1,24 @@
 <?php
-
-    session_start();
-    if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'administrador') {
-        // Redirigir al usuario a acceso_denegado.php si no tiene permisos de administrador
-        header("Location: ./acceso_denegado.html");
+session_start();
+if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'administrador') {
+    // Redirigir al usuario a acceso_denegado.php si no tiene permisos de administrador
+    header("Location: ./acceso_denegado.php");
     exit; // Asegurar que el script se detenga después de redirigir
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Administrador</title>
+    <title>Main - Administrador</title>
     <link rel="icon" type="image/png" href="../pics/logo-man.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/dash.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Librería Chart.js para gráficos -->
+    <link rel="stylesheet" href="../styles/dash.css">
 </head>
 <body>
- <!-- Encabezado -->
+    <!-- Encabezado -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
@@ -33,9 +31,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                   <?php if (isset($_SESSION['nombre_usuario'])) : ?>
+                    <?php if (isset($_SESSION['nombre_usuario'])) : ?>
                         <li class="nav-item">
-                            <span class="navbar-text mr-3">Bienvenido, <?php echo $_SESSION['nombre_usuario']; ?></span>
+                            <span class="navbar-text mr-3">Bienvenido, <?php echo $_SESSION['nombre_completo']; ?></span>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -67,14 +65,12 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                Dashboard del Administrador
+                            <a class="nav-link active" href="#" onclick="cargarContenidoPrincipal()">
+                                Pantalla Principal
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Gestión de Productos
-                            </a>
+                            <a class="nav-link" href="#" onclick="cargarGestionProductos()">Gestión de Productos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
@@ -96,7 +92,7 @@
             </nav>
 
             <!-- Contenido Principal -->
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4" id="contenido-principal">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Dashboard</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
@@ -183,34 +179,8 @@
             </main>
         </div>
     </div>
-
-    <!-- JavaScript opcional -->
-    <script>
-        // Configuración del gráfico
-        var ctx = document.getElementById('ventasChart').getContext('2d');
-        var ventasChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
-                datasets: [{
-                    label: 'Ventas',
-                    data: [150, 220, 180, 300, 250, 400],
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-    </script>
+    <script src="../js/add_product.js"></script>
+    <script src="../js/ventas.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

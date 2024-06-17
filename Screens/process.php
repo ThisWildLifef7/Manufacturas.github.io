@@ -46,6 +46,7 @@ session_start();
                             ?>
                         </a>
                         <ul class="icons-vertical">
+                            <li><a href="./perfil.php">Ver perfil</a></li>
                             <li><a href="../php/logout.php">Cerrar sesión</a></li>
                         </ul>
                     </li>

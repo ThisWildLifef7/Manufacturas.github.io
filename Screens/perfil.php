@@ -20,7 +20,7 @@ $usuario = $result->fetch_assoc();
 
 // Verificar la ruta de la imagen
 $imagen_perfil = $usuario['imagen'];
-$imagen_path = "descargas/" . $imagen_perfil; // Ajusta esta ruta según la estructura de tu proyecto y nombre de directorio
+$imagen_path = "Proyecto-Manufacturas/pics" . $imagen_perfil; // Ajusta esta ruta según la estructura de tu proyecto y nombre de directorio
 
 ?>
 
@@ -55,14 +55,18 @@ $imagen_path = "descargas/" . $imagen_perfil; // Ajusta esta ruta según la estr
                     <img src="<?php echo $imagen_path; ?>" class="img-thumbnail" alt="Imagen de perfil">
                 </div>
                 <div class="col-md-8">
-                    <p><strong>Nombre de Usuario:</strong> <?php echo $usuario['nombre_usuario']; ?></p>
-                    <p><strong>Nombre Completo:</strong> <?php echo $usuario['nombre_completo']; ?></p>
+                    <p><strong>Nombre de usuario:</strong> <?php echo $usuario['nombre_usuario']; ?></p>
+                    <p><strong>Nombre completo:</strong> <?php echo $usuario['nombre_completo']; ?></p>
                     <p><strong>Correo:</strong> <?php echo $usuario['correo']; ?></p>
                     <p><strong>Teléfono:</strong> <?php echo $usuario['telefono']; ?></p>
                     <p><strong>Dirección:</strong> <?php echo $usuario['direccion']; ?></p>
                     <p><strong>Tipo de Usuario:</strong> <?php echo $usuario['tipo_usuario']; ?></p>
                     <a href="./modificar_perfil.php" class="btn btn-primary mr-2">Modificar Perfil</a>
-                    <a href="./dashboard.php" class="btn btn-secondary">Ir al Dashboard</a>
+                    <?php if ($usuario['tipo_usuario'] == 'administrador'): ?>
+                        <a href="./dashboard.php" class="btn btn-secondary">Ir al dashboard</a>
+                    <?php else: ?>
+                        <a href="../index.php" class="btn btn-secondary">Ir al inicio</a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

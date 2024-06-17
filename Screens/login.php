@@ -63,11 +63,15 @@ header("Expires: 0");
                     <h2 class="title">Ingresa tus datos</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Usuario" name="nombre_completo" required/>
+                        <input type="text" placeholder="Nombre" name="nombre_completo" required/>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Usuario" name="nombre_usuario" required/>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Correo" name="nombre_usuario" required/>
+                        <input type="email" placeholder="Correo" name="correo" required/>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>

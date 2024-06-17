@@ -66,6 +66,9 @@
         .img-thumbnail:hover {
             transform: scale(1.05);
         }
+        .form-group textarea {
+            resize: none;
+        }
     </style>
 </head>
 <body>
@@ -80,7 +83,7 @@
                         <div class="form-group">
                             <label for="imagen">Imagen de perfil</label>
                             <div class="position-relative">
-                                <img id="preview-img" src="descargas/<?php echo $usuario['imagen']; ?>" class="img-thumbnail mt-3 mb-3" alt="Vista previa de la imagen">
+                                <img id="preview-img" src="pics/<?php echo $usuario['imagen']; ?>" class="img-thumbnail mt-3 mb-3" alt="">
                                 <button type="button" class="btn btn-primary btn-block" onclick="document.getElementById('imagen').click()">Seleccionar archivo</button>
                                 <input type="file" class="custom-file-input" id="imagen" name="imagen" onchange="previewImage()">
                             </div>
@@ -104,6 +107,7 @@
                             <label for="direccion">Dirección</label>
                             <textarea class="form-control" id="direccion" name="direccion" rows="3" required><?php echo $usuario['direccion']; ?></textarea>
                         </div>
+                        <button type="submit" class="btn btn-secondary float-left" onclick="location.href='./perfil.php'">Atrás</button>
                         <button type="submit" class="btn btn-primary float-right">Guardar Cambios</button>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include('conexion.php'); // Incluye tu archivo de conexión a la base de datos
 
@@ -20,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Manejar la subida de la imagen de perfil
     if (!empty($_FILES['imagen']['name'])) {
         $imagen_perfil = basename($_FILES['imagen']['name']);
-        $target_dir = "uploads/";
+        $target_dir = "pics/";
         $target_file = $target_dir . $imagen_perfil;
         move_uploaded_file($_FILES['imagen']['tmp_name'], $target_file);
     } else {

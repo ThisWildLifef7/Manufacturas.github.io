@@ -34,7 +34,7 @@ html {
   width: 100%;
   padding: 10px;
   display: grid;
-  margin-top: 62px;
+  margin-top: 58px;
   background-color: var(--main-color);
   place-content: center;
 }
@@ -157,8 +157,8 @@ html {
   font-family: var(--font-card);
 }
 .icons-vertical {
-  height: 40px;
-  bottom: -40px;
+  height: 80px;
+  bottom: -80px;
   position: absolute;
   display: none;
   width: 135px;

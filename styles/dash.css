@@ -1,9 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 :root {
-    --main-color: #1F2F3F;
-    --main-two-color: #7AA93C;
-    --color-hover-button: #388E3C;
+  --main-color: #1f2f3f;
+  --main-two-color: #7aa93c;
+  --color-hover-button: #388e3c;
+  --body-fond-color: #fefbf7;
 
-    --font-card: "Poppins", sans-serif;
-    --h2-font-size: 1rem;
-    --small-font-size: 0.75rem;
+  --font-card: "Poppins", sans-serif;
+  --h2-font-size: 1rem;
+  --small-font-size: 0.75rem;
+}
+
+* {
+    font-family: var(--font-card);
+}
+#sidebar {
+   
+}
+
+.nav {
+    font-size: 14px;
 }

@@ -4,6 +4,7 @@ require 'conexion.php';
 
 $name = $_POST['nombre_completo'];
 $username = $_POST['nombre_usuario'];
+$correo = $_POST['correo'];
 $password = $_POST['contraseña'];
 
 //hashear la contraseña
@@ -12,9 +13,9 @@ $password = $_POST['contraseña'];
 $tipo_usuario = 'cliente';
 
 //Insertar un nuevo usuario en la base de datos
-$sql = "INSERT INTO usuarios (nombre_completo, nombre_usuario, contraseña, tipo_usuario) VALUES (?, ?, ?, '$tipo_usuario')";
+$sql = "INSERT INTO usuarios (nombre_completo, nombre_usuario, correo, contraseña, tipo_usuario) VALUES (?, ?, ?, ?, '$tipo_usuario')";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("sss", $name, $username, $password);
+$stmt->bind_param("ssss", $name, $username, $correo, $password);
 
 if ($stmt -> execute()) {
     echo "<script>

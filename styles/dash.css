@@ -11,12 +11,14 @@
 }
 
 * {
-    font-family: var(--font-card);
-}
-#sidebar {
-   
+  font-family: var(--font-card);
 }
 
 .nav {
-    font-size: 14px;
+  font-size: 14px;
 }
+.mb-3 textarea {
+  resize: none;
+}
+
+

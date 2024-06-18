@@ -1,5 +1,8 @@
 <?php
 session_start();
+include '../php/conexion.php'; // Ajusta la ruta según tu estructura
+
+$result = mysqli_query($conn, "SELECT * FROM productos");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -79,18 +82,18 @@ session_start();
             <h2 class="section-title">Venta de productos</h2>
             <!--Content-->
             <div class="shop-content">
-                <div class="product-box">
-                    <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
-                    <h2 class="product-title">Enterizo con cierre</h2>
-                    <span class="price">$25</span>
-                    <i class='bx bx-shopping-bag add-cart'></i>
-                </div>
-                <div class="product-box">
-                    <img src="../pics/fond-textil.jpg" alt="ropa" class="product-img">
-                    <h2 class="product-title">Enterizo con cierre</h2>
-                    <span class="price">$25</span>
-                    <i class='bx bx-shopping-bag add-cart'></i>
-                </div>
+                <?php while ($row = mysqli_fetch_assoc($result)) : ?>
+                    <div class="product-box">
+                        <img src="../images/<?php echo htmlspecialchars($row['image']); ?>" alt="producto" class="product-img">
+                        <h2 class="product-title"><?php echo htmlspecialchars($row['nombre']); ?></h2>
+                        <p class="product-description"><?php echo htmlspecialchars($row['descripcion']); ?></p>
+                        <span class="price">$<?php echo htmlspecialchars($row['precio']); ?></span>
+                        <span class="stock"><?php echo htmlspecialchars($row['stock']); ?></span>
+                        <span class="categoria">Categoría: <?php echo obtenerNombreCategoria($conn, $row['categoria_id']); ?></span>
+                        <!-- Ajusta la función obtenerNombreCategoria según cómo obtengas el nombre de la categoría -->
+                        <i class='bx bx-shopping-bag add-cart'></i>
+                    </div>
+                <?php endwhile; ?>
                 <div class="product-box">
                     <img src="../pics/fond_3.jpg" alt="ropa" class="product-img">
                     <h2 class="product-title">Enterizo con cierre</h2>

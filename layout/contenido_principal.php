@@ -1,49 +1,10 @@
-function cargarGestionProductos() {
-  var contenido = `
-                <h1>Gestión de Productos</h1>
-                <form method="post" action="procesar_agregar_producto.php" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="nombre">Nombre del producto:</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Dashboard</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="btn-group mr-2">
+                        <button class="btn btn-sm btn-outline-secondary">Exportar</button>
                     </div>
-                    <div class="form-group">
-                        <label for="descripcion">Descripción:</label>
-                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="precio">Precio:</label>
-                        <input type="number" step="0.01" class="form-control" id="precio" name="precio" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="stock">Stock:</label>
-                        <input type="number" class="form-control" id="stock" name="stock" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="categoria">Categoría:</label>
-                        <select class="form-control" id="categoria" name="categoria" required>
-                            <!-- Aquí debes cargar las categorías desde tu base de datos -->
-                            <option value="1">Categoría 1</option>
-                            <option value="2">Categoría 2</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="imagen">Imagen del producto:</label>
-                        <input type="file" class="form-control-file" id="imagen" name="imagen" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Agregar Producto</button>
-                </form>
-            `;
-  $("#contenido-principal").html(contenido);
-}
-function cargarContenidoPrincipal() {
-  var contenidoMain = `
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Dashboard</h1>
-                    <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="btn-group mr-2">
-                            <button class="btn btn-sm btn-outline-secondary">Exportar</button>
-                        </div>
-                    </div>
+                </div>
                 </div>
 
                 <div class="row">
@@ -119,7 +80,33 @@ function cargarContenidoPrincipal() {
                             </div>
                         </div>
                     </div>
-                </div>
-    `;
-  $("#contenido-principal").html(contenidoMain);
-}
+</div>
+<script>
+    var ctx = document.getElementById("ventasChart").getContext("2d");
+    var ventasChart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun"],
+            datasets: [
+            {
+                label: "Ventas",
+                data: [150, 220, 180, 300, 250, 400],
+                backgroundColor: "rgba(54, 162, 235, 0.2)",
+                borderColor: "rgba(54, 162, 235, 1)",
+                borderWidth: 1,
+            },
+            ],
+        },
+        options: {
+            scales: {
+            yAxes: [
+                {
+                ticks: {
+                    beginAtZero: true,
+                },
+                },
+            ],
+            },
+        },
+    });
+</script>

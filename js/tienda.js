@@ -73,10 +73,12 @@ function addCartClicked(event) {
     const title = shopProducts.getElementsByClassName("product-title")[0].innerText;
     const price = shopProducts.getElementsByClassName("price")[0].innerText;
     const productImg = shopProducts.getElementsByClassName("product-img")[0].src;
-    addProductToCart(title, price, productImg);
+    const description = shopProducts.getElementsByClassName("product-description")[0].innerText;
+    const stock = shopProducts.getElementsByClassName("stock")[0].innerText;
+    addProductToCart(title, price, productImg, description, stock);
     updateTotal();
 }
-function addProductToCart(title, price, productImg) {
+function addProductToCart(title, price, productImg, description, stock) {
     const cartShopBox = document.createElement('div');
     cartShopBox.classList.add("cart-box");
     const cartItems = document.getElementsByClassName('cart-content')[0];
@@ -91,6 +93,8 @@ function addProductToCart(title, price, productImg) {
             <img src="${productImg}" alt="" class="cart-img">
             <div class="detail-box">
                 <div class="cart-product-title">'${title}'</div>
+                <div class="cart-product-description">'${description}'</div>
+                <div class="cart-product-stock">'${stock}'</div>
                 <div class="cart-price">${price}</div>
             <input type="number" value="1" class="cart-quantity">
             </div>

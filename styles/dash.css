@@ -7,18 +7,75 @@
 
   --font-card: "Poppins", sans-serif;
   --h2-font-size: 1rem;
-  --small-font-size: 0.75rem;
+  --small-font-size: 0.85rem;
 }
 
 * {
   font-family: var(--font-card);
+  list-style: none;
 }
 
+header {
+  background: var(--main-color);
+}
 .nav {
   font-size: 14px;
 }
+.form-control,
 .mb-3 textarea {
   resize: none;
 }
+.nav-item i {
+  color: white;
+  font-size: 18px;
+}
+.control-option {
+  display: flex;
+  align-items: center;
+}
+#sidebar {
+  background-color: var(--main-color);
+  padding: 10px;
+  overflow-y: auto;
+}
+#sidebar .nav-link {
+  font-size: var(--small-font-size);
+  color: white;
+}
+#contenido-principal {
+  padding-bottom: 24px;
+}
 
-
+.control-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.nav-item ul {
+  display: none;
+  list-style: none;
+  padding-left: 20px;
+}
+.nav-item.active ul {
+  display: block;
+}
+.arrow {
+  transition: transform 0.3s ease;
+}
+.nav-item.active .arrow {
+  transform: rotate(180deg);
+}
+.item-plus {
+  color: var(--body-fond-color);
+  display: block;
+  width: 100%;
+  padding: .25rem 1.5rem;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  text-decoration: none !important;
+}
+.item-plus:hover {
+  background-color: var(--main-two-color);
+  color: white;
+}

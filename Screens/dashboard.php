@@ -18,11 +18,12 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'administ
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Librería Chart.js para gráficos -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <!-- Encabezado -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#">
                 <img src="../pics/logo-man.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 Manufacturas America EIRL
@@ -63,32 +64,81 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'administ
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#" onclick="cargarContenidoPrincipal()">
-                                Pantalla Principal
-                            </a>
+                            <div class="control-option">
+                                <i class='bx bx-grid-alt'></i>
+                                <a class="nav-link" href="#" onclick="cargarContenidoPrincipal()">
+                                    Menu principal
+                                </a>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="cargarAddProductos()">
-                                Gestión de Productos</a>
+                            <div class="control-option">
+                                <i class='bx bx-store-alt'></i>
+                                <a class="nav-link" href="#">
+                                    Productos
+                                </a>
+                                <i class='bx bxs-chevron-down arrow'></i>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a class="item-plus" href="#" onclick="cargarListaProductos()">
+                                        Lista de Productos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-plus" href="#" onclick="cargarAddCategorias()">
+                                        Nueva categoria
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-plus" href="#" onclick="cargarAddTallas()">
+                                        Nueva talla
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-plus" href="#" onclick="cargarAddProductos()">
+                                        Nuevo producto
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="cargarGestionPedidos()">
-                                Gestión de Pedidos
-                            </a>
+                            <div class="control-option">
+                                <i class='bx bx-user'></i>
+                                <a class="nav-link">
+                                    Usuarios
+                                </a>
+                                <i class='bx bxs-chevron-down arrow'></i>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a class="item-plus" href="#" onclick="cargarListaUsuarios()">
+                                        Gestionar usuarios
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-plus" href="#" onclick="cargarAddUsers()">
+                                        Nuevo usuario
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="#" onclick="cargarEstadisticas()">
                                 Estadísticas
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="cargarConfiguracion()">
-                                Configuración
-                            </a>
+                            <div class="control-option">
+                                <i class='bx bx-cog'></i>
+                                <a class="nav-link" href="#" onclick="cargarConfiguracion()">
+                                    Configuración
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </div>

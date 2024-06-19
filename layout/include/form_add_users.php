@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Lista de usuarios</h1>
+    <h1 class="h2">Anadir un nuevo usuario</h1>
 </div>
 
-<!-- Aquí va el contenido para la gestión de pedidos -->
+<!-- Aquí va el contenido para añadir usuarios -->

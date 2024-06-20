@@ -92,9 +92,7 @@ function addProductToCart(title, price, productImg, description, stock) {
     var cartBoxContent = `
             <img src="${productImg}" alt="" class="cart-img">
             <div class="detail-box">
-                <div class="cart-product-title">'${title}'</div>
-                <div class="cart-product-description">'${description}'</div>
-                <div class="cart-product-stock">'${stock}'</div>
+                <div class="cart-product-title">${title}</div>
                 <div class="cart-price">${price}</div>
             <input type="number" value="1" class="cart-quantity">
             </div>

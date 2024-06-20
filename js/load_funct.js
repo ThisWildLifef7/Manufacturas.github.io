@@ -25,14 +25,14 @@ function cargarConfiguracion() {
 
 //Funciones secundarias
 function cargarAddProductos() {
-  $("#contenido-principal").load("../layout/include/form_add_producto.php");
+  $("#contenido-principal").load("../layout/form_add_producto.php");
 }
 function cargarAddCategorias() {
-  $("#contenido-principal").load("../layout/include/form_add_categorias.php");
+  $("#contenido-principal").load("../layout/form_add_categorias.php");
 }
 function cargarAddUsers() {
-    $("#contenido-principal").load("../layout/include/form_add_users.php");
+    $("#contenido-principal").load("../layout/form_add_users.php");
 }
 function cargarAddTallas() {
-    $("#contenido-principal").load("../layout/include/form_add_tallas.php");
+    $("#contenido-principal").load("../layout/form_add_tallas.php");
 }

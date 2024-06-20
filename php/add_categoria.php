@@ -1,26 +1,25 @@
 <?php
-session_start();
-include ('conexion.php');
 
-// Verificar si el formulario ha sido enviado
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Recibir los datos del formulario
-    $nombre = $_POST['nombre'];
-    $descripcion = $_POST['descripcion'];
+require ('conexion.php');
 
-    // Preparar la declaración SQL para evitar inyecciones SQL
-    $stmt = $conn->prepare("INSERT INTO categorias (nombre, descripcion) VALUES (?, ?)");
-    $stmt->bind_param("ss", $nombre, $descripcion);
+$name = $_POST['nombre'];
+$description = $_POST['descripcion'];
 
-    // Ejecutar la declaración
-    if ($stmt->execute() === TRUE) {
-        echo "La categoría se ha añadido correctamente.";
-    } else {
-        echo "Error: " . $stmt->error;
-    }
+$sql = "INSERT INTO categorias(nombre, descripcion) VALUES (?, ?)";
 
-    // Cerrar la declaración y la conexión
-    $stmt->close();
-    $conn->close();
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ss", $name, $description);
+
+if ($stmt -> execute()) {
+    echo "<script>
+            alert('La categoria ha sido añadida');
+            window.location.href = '../Screens/dashboard.php';
+          </script>";
+} else {
+    echo "Error: " . $stmt -> error;
 }
+
+$stmt -> close();
+$conn -> close();
+
 ?>

@@ -60,7 +60,6 @@ $imagen_path = "Proyecto-Manufacturas/pics" . $imagen_perfil; // Ajusta esta rut
                     <p><strong>Correo:</strong> <?php echo $usuario['correo']; ?></p>
                     <p><strong>Teléfono:</strong> <?php echo $usuario['telefono']; ?></p>
                     <p><strong>Dirección:</strong> <?php echo $usuario['direccion']; ?></p>
-                    <p><strong>Tipo de Usuario:</strong> <?php echo $usuario['tipo_usuario']; ?></p>
                     <a href="./modificar_perfil.php" class="btn btn-primary mr-2">Modificar Perfil</a>
                     <?php if ($usuario['tipo_usuario'] == 'administrador'): ?>
                         <a href="./dashboard.php" class="btn btn-secondary">Ir al dashboard</a>

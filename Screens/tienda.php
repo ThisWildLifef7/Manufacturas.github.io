@@ -87,9 +87,8 @@ $result = mysqli_query($conn, "SELECT * FROM productos");
                         <img src="data:pics/jpg;base64,<?php echo base64_encode($row['photo'])?>" alt="producto" class="product-img">
                         <h2 class="product-title"><?php echo htmlspecialchars($row['nombre']); ?></h2>
                         <p class="product-description">Descripción: <?php echo htmlspecialchars($row['descripcion']); ?></p>
-                        <span class="price">Precio: $<?php echo htmlspecialchars($row['precio']); ?></span><br>
+                        <span class="price">$<?php echo htmlspecialchars($row['precio']); ?></span><br>
                         <span class="stock">Stock: <?php echo htmlspecialchars($row['stock']); ?></span>
-                        <!-- Ajusta la función obtenerNombreCategoria según cómo obtengas el nombre de la categoría -->
                         <i class='bx bx-shopping-bag add-cart'></i>
                     </div>
                 <?php endwhile; ?>

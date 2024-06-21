@@ -1,3 +1,7 @@
+<?php
+require '../tools/count_users.php'; // Ajusta la ruta según tu estructura
+;
+?>
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Dashboard</h1>
     <div class="btn-toolbar mb-2 mb-md-0">
@@ -75,8 +79,8 @@
                 Usuarios Registrados
             </div>
             <div class="card-body">
-                <h5 class="card-title">Total: 1000</h5>
-                <a href="#" class="btn btn-primary">Ver Detalles</a>
+                <h5 class="card-title"><?php echo $total_usuarios; ?></h5>
+                <a href="#" class="btn btn-primary" onclick="cargarListaUsuarios()">Ver Detalles</a>
             </div>
         </div>
     </div>

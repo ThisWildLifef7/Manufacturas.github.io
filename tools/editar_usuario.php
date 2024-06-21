@@ -1,5 +1,4 @@
 <?php
-session_start();
 require ('../php/conexion.php');
 
 // Verificar si se ha enviado el formulario de edición
@@ -14,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Actualizar los datos del usuario
     $stmt = $conn->prepare("UPDATE usuarios SET nombre_usuario=?, nombre_completo=?, correo=?, telefono=?, direccion=?, tipo_usuario=? WHERE usuario_id=?");
-    $stmt->bind_param("sssssssi", $nombre_usuario, $nombre_completo, $correo, $telefono, $direccion, $tipo_usuario, $usuario_id);
+    $stmt->bind_param("ssssssi", $nombre_usuario, $nombre_completo, $correo, $telefono, $direccion, $tipo_usuario, $usuario_id);
 
     if ($stmt->execute() === TRUE) {
         echo "El usuario se ha actualizado correctamente.";
@@ -24,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $stmt->close();
     $conn->close();
-    header("Location: listar_usuarios.php");
+    header("Location: ../Screens/dashboard.php");
     exit();
 }
 
@@ -34,7 +33,7 @@ if (isset($_GET['id'])) {
     $result = $conn->query("SELECT * FROM usuarios WHERE usuario_id=$usuario_id");
     $usuario = $result->fetch_assoc();
 } else {
-    header("Location: listar_usuarios.php");
+    header("Location: ../Screens/dashboard.php");
     exit();
 }
 ?>

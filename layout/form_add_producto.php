@@ -9,7 +9,9 @@
 </head>
 <body>
 <div class="container mt-5">
-    <h2 class="my-4">Agregar nuevo producto</h2>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Crear nuevo producto</h1>
+    </div>
     <form action="../php/add_producto.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="nombre" class="form-label">Nombre</label>
@@ -17,7 +19,7 @@
         </div>
         <div class="form-group">
             <label for="descripcion" class="form-label">Descripción</label>
-            <textarea class="form-control" rows="5" id="descripcion" name="descripcion" required></textarea>
+            <textarea class="form-control" rows="3" id="descripcion" name="descripcion" required></textarea>
         </div>
         <div class="form-group" id="src-file1">
             <label for="photo" class="form-label">Imagen</label>

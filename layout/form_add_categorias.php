@@ -14,7 +14,9 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2>Añadir nueva categoría</h2>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Crear nueva categoría</h1>
+        </div>
         <form action="../php/add_categoria.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="nombre">Nombre de la Categoría</label>

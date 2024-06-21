@@ -12,7 +12,7 @@ function cargarContenidoPrincipal() {
 }
 //Funcion para cargar agregar productos
 function cargarListaProductos() {
-  $("#contenido-principal").load("../layout/listaProductos.php");
+  $("#contenido-principal").load("../layout/gestion_productos.php");
 }
 //Funcion para cargar gestion de pedidos
 function cargarListaUsuarios() {
@@ -36,3 +36,5 @@ function cargarAddUsers() {
 function cargarAddTallas() {
     $("#contenido-principal").load("../layout/form_add_tallas.php");
 }
+
+//Funciones terciarias

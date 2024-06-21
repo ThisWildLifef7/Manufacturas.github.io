@@ -18,17 +18,10 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssss", $name, $username, $correo, $password);
 
 if ($stmt -> execute()) {
-    if ($tipo_usuario == 'administrador') {
-        echo "<script>
-                alert('Tu cuenta ha sido creada satisfactoriamente');
-                window.location.href = '../layout/gestion_usuarios.php';
-            </script>";
-    } else {
     echo "<script>
             alert('Tu cuenta ha sido creada satisfactoriamente');
             window.location.href = '../Screens/login.php';
           </script>";
-    }
     // header("Location: ../Screens/login.php");
 } else {
     echo "Error: " . $stmt -> error;

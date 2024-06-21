@@ -1,7 +1,7 @@
 <?php
 //Se cambia los valores
 $servername = "localhost:3310";
-$username = "root";
+$username = "root";                                                                                        
 $password_db = "";
 $dbname = "manufacturas";
 

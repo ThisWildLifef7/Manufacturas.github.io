@@ -30,7 +30,7 @@ include ('../tools/editar_usuario.php');
 <body>
     <div class="container mt-5">
         <h2>Editar usuario</h2>
-        <form method="post" class="row g-3" enctype="multipart/form-data">
+        <form action="" method="post" class="row g-3" enctype="multipart/form-data">
             <input type="hidden" name="usuario_id" value="<?php echo $usuario['usuario_id']; ?>">
             <div class="col-md-6">
                 <label for="nombre_usuario" class="form-label">Usuario</label>

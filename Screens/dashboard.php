@@ -86,22 +86,22 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'administ
                             <ul>
                                 <li>
                                     <a class="item-plus" href="#" onclick="cargarListaProductos()">
-                                        Lista de Productos
+                                        Gestionar Productos
                                     </a>
                                 </li>
                                 <li>
                                     <a class="item-plus" href="#" onclick="cargarAddCategorias()">
-                                        Nueva categoria
+                                        Añadir categoria
                                     </a>
                                 </li>
                                 <li>
                                     <a class="item-plus" href="#" onclick="cargarAddTallas()">
-                                        Nueva talla
+                                        Añadir talla
                                     </a>
                                 </li>
                                 <li>
                                     <a class="item-plus" href="#" onclick="cargarAddProductos()">
-                                        Nuevo producto
+                                        Añadir producto
                                     </a>
                                 </li>
                             </ul>
@@ -122,7 +122,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'administ
                                 </li>
                                 <li>
                                     <a class="item-plus" href="#" onclick="cargarAddUsers()">
-                                        Nuevo usuario
+                                        Añadir usuario
                                     </a>
                                 </li>
                             </ul>

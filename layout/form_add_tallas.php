@@ -52,7 +52,7 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
             <div class="col-md-6">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Lista de Tallas</h1>
+                    <h1 class="h2">Lista de tallas</h1>
                 </div>
                 <?php if ($mensaje): ?>
                     <div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -79,7 +79,7 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
                                     <td><?php echo $row['nombre']; ?></td>
                                     <td><?php echo $row['descripcion']; ?></td>
                                     <td>
-                                        <a href="editar_talla.php?id=<?php echo $row['talla_id']; ?>"
+                                        <a href="../layout/edit_talla.php?id=<?php echo $row['talla_id']; ?>"
                                             class="btn btn-warning btn-sm">Editar</a>
                                         <a href="../tools/eliminar_talla.php?id=<?php echo $row['talla_id']; ?>"
                                             class="btn btn-danger btn-sm"

@@ -18,6 +18,12 @@ function cargarListaProductos() {
 function cargarListaUsuarios() {
   $("#contenido-principal").load("../layout/gestion_usuarios.php");
 }
+function cargarListaPedidos() {
+  $("#contenido-principal").load("../layout/gestion_pedidos.php");
+}
+function cargarListaDetalles() {
+  $("#contenido-principal").load("../layout/gestion_detalles.php");
+}
 //Funcion para cargar configuracion
 function cargarConfiguracion() {
   $("#contenido-principal").load("../layout/configuracion.php");

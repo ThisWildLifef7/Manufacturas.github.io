@@ -127,11 +127,27 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'administ
                                 </li>
                             </ul>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="cargarEstadisticas()">
-                                Estadísticas
-                            </a>
-                        </li> -->
+                        <li class="nav-item">
+                            <div class="control-option">
+                                <i class='bx bxs-shopping-bag'></i>
+                                <a class="nav-link" href="#">
+                                    Pedidos
+                                </a>
+                                <i class='bx bxs-chevron-down arrow'></i>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a class="item-plus" href="#" onclick="cargarListaPedidos()">
+                                        Gestionar pedidos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-plus" href="#" onclick="cargarListaDetalles()">
+                                        Detalle pedido
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="nav-item">
                             <div class="control-option">
                                 <i class='bx bx-cog'></i>

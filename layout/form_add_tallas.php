@@ -34,7 +34,7 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Crear nueva talla</h1>
                 </div>
-                <form action="add_talla.php" method="post" enctype="multipart/form-data">
+                <form action="../php/add_talla.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="nombre">Digitar talla</label>
                         <input type="text" class="form-control" id="nombre" name="nombre"

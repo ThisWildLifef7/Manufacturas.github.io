@@ -13,7 +13,7 @@ $stmt->bind_param("ss", $name, $description);
 if ($stmt->execute()) {
     echo "<script>
             alert('La talla ha sido añadida');
-            location.href = document.referrer;
+            window.location.href = '../Screens/dashboard.php'
           </script>";
 } else {
     echo "Error: " . $stmt->error;

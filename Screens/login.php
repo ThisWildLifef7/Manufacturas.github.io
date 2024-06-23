@@ -96,7 +96,7 @@ header("Expires: 0");
                 </form>
             </div>
         </div>
-    
+
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">

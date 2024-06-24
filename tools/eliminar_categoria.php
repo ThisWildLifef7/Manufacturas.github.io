@@ -8,10 +8,10 @@ if (isset($_GET['id'])) {
 
     // Eliminar la talla de la base de datos
     $stmt = $conn->prepare("DELETE FROM categorias WHERE categoria_id=?");
-    $stmt->bind_param("i", $talla_id);
+    $stmt->bind_param("i", $categoria_id);
 
     if ($stmt->execute() === TRUE) {
-        $mensaje = "La talla se ha eliminado correctamente.";
+        $mensaje = "La categoria se ha eliminado correctamente.";
     } else {
         $mensaje = "Error: " . $stmt->error;
     }

@@ -1,23 +1,46 @@
 <?php
 session_start();
-require ('../php/conexion.php');
+include ('../php/conexion.php');
 
+// Verificar si se ha recibido el ID del pedido y validar la entrada
+if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+    // Redirigir a la lista de pedidos si no se proporciona un ID válido
+    header("Location: listar_pedidos.php?mensaje=" . urlencode("ID de pedido no válido."));
+    exit();
+}
+
+$orden_id = intval($_GET['id']);  // Convertir a entero para mayor seguridad
 
 // Obtener los detalles del pedido
 $sql = "SELECT productos.nombre, productos.descripcion, productos.precio, orderdetails.cantidad, orderdetails.precio AS precio_total
-            FROM ordendetails
-            JOIN tallas ON orderdetails.product_talla_id = producttallas.product_talla_id
-            JOIN productos ON producttallas.producto_id = productos.producto_id
-            WHERE orderdetails.orden_id = ?";
+        FROM orderdetails
+        JOIN productsizes ON orderdetails.product_talla_id = productsizes.product_talla_id
+        JOIN productos ON productsizes.producto_id = productos.producto_id
+        WHERE orderdetails.orden_id = ?";
+$stmt = $conn->prepare($sql);
+if (!$stmt) {
+    die("Error en la preparación de la consulta: " . $conn->error);
+}
+$stmt->bind_param("i", $orden_id);
+$stmt->execute();
+$result = $stmt->get_result();
 
 // Obtener información del pedido y del cliente
 $sql_pedido = "SELECT orden.orden_id, usuarios.nombre_completo, usuarios.correo, orden.monto_total, orden.status, orden.created_at
-                   FROM orden
-                   JOIN usuarios ON orden.usuario_id = usuarios.usuario_id
-                   WHERE orden.orden_id = ?";
-
-$result = $conn->query($sql_pedido, $sql);
-
+               FROM orden
+               JOIN usuarios ON orden.usuario_id = usuarios.usuario_id
+               WHERE orden.orden_id = ?";
+$stmt_pedido = $conn->prepare($sql_pedido);
+if (!$stmt_pedido) {
+    die("Error en la preparación de la consulta: " . $conn->error);
+}
+$stmt_pedido->bind_param("i", $orden_id);
+$stmt_pedido->execute();
+$pedido = $stmt_pedido->get_result()->fetch_assoc();
+if (!$pedido) {
+    header("Location: listar_pedidos.php?mensaje=" . urlencode("Pedido no encontrado."));
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,18 +57,30 @@ $result = $conn->query($sql_pedido, $sql);
     <div class="container mt-5">
         <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Detalle del Pedido #<?php echo $pedido['orden_id']; ?></h1>
+            <h1 class="h2">Detalle del Pedido #
+                <?php echo htmlspecialchars($pedido['orden_id']); ?>
+            </h1>
         </div>
         <div class="mb-3">
             <h4>Información del Cliente</h4>
-            <p><strong>Nombre:</strong> <?php echo $pedido['nombre_completo']; ?></p>
-            <p><strong>Correo:</strong> <?php echo $pedido['correo']; ?></p>
+            <p><strong>Nombre:</strong>
+                <?php echo htmlspecialchars($pedido['nombre_completo']); ?>
+            </p>
+            <p><strong>Correo:</strong>
+                <?php echo htmlspecialchars($pedido['correo']); ?>
+            </p>
         </div>
         <div class="mb-3">
             <h4>Información del Pedido</h4>
-            <p><strong>Monto Total:</strong> <?php echo $pedido['monto_total']; ?></p>
-            <p><strong>Estado:</strong> <?php echo $pedido['status']; ?></p>
-            <p><strong>Fecha de Creación:</strong> <?php echo $pedido['created_at']; ?></p>
+                <p><strong>Monto Total:</strong>
+                    <?php echo htmlspecialchars($pedido['monto_total']); ?>
+                </p>
+                <p><strong>Estado:</strong>
+                    <?php echo htmlspecialchars($pedido['status']); ?>
+                </p>
+                <p><strong>Fecha de Creación:</strong>
+                    <?php echo htmlspecialchars($pedido['created_at']); ?>
+                </p>
         </div>
         <table class="table table-bordered">
             <thead>
@@ -59,13 +94,13 @@ $result = $conn->query($sql_pedido, $sql);
             </thead>
             <tbody>
                 <?php while ($row = $result->fetch_assoc()): ?>
-                    <tr>
-                        <td><?php echo $row['nombre']; ?></td>
-                        <td><?php echo $row['descripcion']; ?></td>
-                        <td><?php echo $row['precio']; ?></td>
-                        <td><?php echo $row['cantidad']; ?></td>
-                        <td><?php echo $row['precio_total']; ?></td>
-                    </tr>
+                        <tr>
+                            <td><?php echo htmlspecialchars($row['nombre']); ?></td>
+                            <td><?php echo htmlspecialchars($row['descripcion']); ?></td>
+                            <td><?php echo htmlspecialchars($row['precio']); ?></td>
+                            <td><?php echo htmlspecialchars($row['cantidad']); ?></td>
+                            <td><?php echo htmlspecialchars($row['precio_total']); ?></td>
+                        </tr>
                 <?php endwhile; ?>
             </tbody>
         </table>

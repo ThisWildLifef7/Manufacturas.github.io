@@ -12,11 +12,11 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 $orden_id = intval($_GET['id']);  // Convertir a entero para mayor seguridad
 
 // Obtener los detalles del pedido
-$sql = "SELECT productos.nombre, productos.descripcion, productos.precio, orderdetails.cantidad, orderdetails.precio AS precio_total
-        FROM orderdetails
-        JOIN productsizes ON orderdetails.product_talla_id = productsizes.product_talla_id
-        JOIN productos ON productsizes.producto_id = productos.producto_id
-        WHERE orderdetails.orden_id = ?";
+$sql = "SELECT productos.nombre, productos.descripcion, productos.precio, ordendetails.cantidad, ordendetails.precio AS precio_total
+        FROM ordendetails
+        JOIN producttallas ON ordendetails.product_talla_id = producttallas.product_talla_id
+        JOIN productos ON producttallas.producto_id = productos.producto_id
+        WHERE ordendetails.orden_id = ?";
 $stmt = $conn->prepare($sql);
 if (!$stmt) {
     die("Error en la preparación de la consulta: " . $conn->error);

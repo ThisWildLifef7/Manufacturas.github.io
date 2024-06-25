@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../php/conexion.php'; // Ajusta la ruta según tu estructura
+require ('../php/conexion.php'); // Ajusta la ruta según tu estructura
 
 $result = mysqli_query($conn, "SELECT * FROM productos");
 ?>

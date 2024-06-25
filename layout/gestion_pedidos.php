@@ -26,7 +26,7 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
     <div class="container mt-5">
         <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Lista de Pedidos</h1>
+            <h1 class="h2">Lista de pedidos</h1>
         </div>
         <?php if ($mensaje): ?>
             <div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -42,9 +42,9 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
                     <th>ID</th>
                     <th>Cliente</th>
                     <th>Correo</th>
-                    <th>Monto Total</th>
+                    <th>Monto total</th>
                     <th>Estado</th>
-                    <th>Fecha de Creación</th>
+                    <th>Fecha de creación</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -60,7 +60,7 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
                             <td><?php echo $row['created_at']; ?></td>
                             <td>
                                 <a href="ver_detalle_pedido.php?id=<?php echo $row['orden_id']; ?>"
-                                    class="btn btn-info btn-sm">Ver Detalle</a>
+                                    class="btn btn-info btn-sm">Ver detalle</a>
                             </td>
                         </tr>
                     <?php endwhile; ?>

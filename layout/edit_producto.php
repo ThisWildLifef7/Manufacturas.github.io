@@ -9,7 +9,7 @@ include ('../tools/editar_usuario.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar usuario</title>
+    <title>Editar producto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,7 @@ include ('../tools/editar_usuario.php');
 
 <body>
     <div class="container mt-5">
-        <h2>Editar usuario</h2>
+        <h2>Editar producto</h2>
         <form action="" method="post" class="row g-3" enctype="multipart/form-data">
             <input type="hidden" name="usuario_id" value="<?php echo $usuario['usuario_id']; ?>">
             <div class="col-md-6">

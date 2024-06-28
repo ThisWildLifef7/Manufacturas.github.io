@@ -30,7 +30,7 @@ include ('../tools/editar_usuario.php');
 <body>
     <div class="container mt-5">
         <h2>Editar usuario</h2>
-        <form method="post" class="row g-3" enctype="multipart/form-data">
+        <form method="post" class="row g-3">
             <input type="hidden" name="usuario_id" value="<?php echo $usuario['usuario_id']; ?>">
             <div class="col-md-6">
                 <label for="nombre_usuario" class="form-label">Usuario</label>
@@ -60,8 +60,7 @@ include ('../tools/editar_usuario.php');
                 <label for="tipo_usuario" class="form-label">Tipo de usuario</label>
                 <select class="form-control" id="tipo_usuario" name="tipo_usuario">
                     <option value="administrador" <?php echo $usuario['tipo_usuario'] == 'administrador' ? 'selected' : ''; ?>>Administrador</option>
-                    <option value="cliente" <?php echo $usuario['tipo_usuario'] == 'cliente' ? 'selected' : ''; ?>>Cliente
-                    </option>
+                    <option value="cliente" <?php echo $usuario['tipo_usuario'] == 'cliente' ? 'selected' : ''; ?>>Cliente</option>
                 </select>
             </div>
             <div class="col-12">

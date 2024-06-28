@@ -22,8 +22,8 @@
             <textarea class="form-control" rows="3" id="descripcion" name="descripcion" required></textarea>
         </div>
         <div class="form-group" id="src-file1">
-            <label for="photo" class="form-label">Imagen</label>
-            <input type="file" class="form-control-file" id="photo" name="photo" required>
+            <label for="imagen" class="form-label">Imagen</label>
+            <input type="file" class="form-control-file" id="imagen" name="imagen" required>
         </div>
         <div class="form-group">
             <label for="precio" class="form-label">Precio</label>

@@ -83,7 +83,7 @@ $result = mysqli_query($conn, "SELECT * FROM productos");
             <div class="shop-content">
                 <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                     <div class="product-box">
-                        <img src="data:pics/jpg;base64,<?php echo base64_encode($row['photo'])?>" alt="producto" class="product-img">
+                        <img src="data:pics/jpg;base64,<?php echo base64_encode($row['imagen'])?>" alt="producto" class="product-img">
                         <h2 class="product-title"><?php echo htmlspecialchars($row['nombre']); ?></h2>
                         <p class="product-description">Descripción: <?php echo htmlspecialchars($row['descripcion']); ?></p>
                         <span class="price">$<?php echo htmlspecialchars($row['precio']); ?></span><br>

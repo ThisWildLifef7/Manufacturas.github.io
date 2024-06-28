@@ -4,12 +4,12 @@ require ('conexion.php');
 
 $name = $_POST['nombre'];
 $description = $_POST['descripcion'];
-$imagen = addslashes(file_get_contents($_FILES['photo']['tmp_name']));
+$imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 $price = $_POST['precio'];
 $stockd = $_POST['stock'];
 $category_id = $_POST['categoria_id'];
 
-$sql = "INSERT INTO productos(nombre, descripcion, photo, precio, stock, categoria_id) VALUES (?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO productos(nombre, descripcion, imagen, precio, stock, categoria_id) VALUES (?, ?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssssss", $name, $description, $imagen, $price, $stockd, $category_id);

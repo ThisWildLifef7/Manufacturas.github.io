@@ -64,7 +64,7 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
                             <td><?php echo $row['descripcion']; ?></td>
                             <td><?php echo $row['precio']; ?></td>
                             <td><?php echo $row['stock']; ?></td>
-                            <td><img src="<?php echo $row['photo']; ?>" alt="Imagen" width="50"></td>
+                            <td><img src="<?php echo $row['imagen']; ?>" alt="Imagen" width="50"></td>
                             <td><?php echo $row['categoria_id']; ?></td>
                             <td>
                                 <a href="../layout/edit_producto.php?id=<?php echo $row['producto_id']; ?>"

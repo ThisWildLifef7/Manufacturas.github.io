@@ -40,7 +40,7 @@ html {
 }
 
 .nav-left {
-  width: 57rem;
+  width: 62rem;
   padding: 5px;
   display: flex;
   color: white;
@@ -63,7 +63,7 @@ html {
 .op-found {
   display: flex;
   justify-content: space-between;
-  width: 37rem;
+  width: 47rem;
   font-family: var(--parrafo);
   font-size: 14px;
 }

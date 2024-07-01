@@ -1,10 +1,9 @@
-<!-- Aquí va el contenido para las estadísticas -->
 <?php
 session_start();
 require ('../php/conexion.php');
 
 // Obtener todos los usuarios de la base de datos
-$sql = "SELECT * FROM productos";
+$sql = "SELECT producto_id, nombre, descripcion, imagen, precio, stock, categoria_id FROM productos";
 $result = $conn->query($sql);
 
 //Verificar si hay un mensaje en la URL
@@ -16,7 +15,7 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de usuarios</title>
+    <title>Lista de productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .table {
@@ -64,12 +63,12 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
                             <td><?php echo $row['descripcion']; ?></td>
                             <td><?php echo $row['precio']; ?></td>
                             <td><?php echo $row['stock']; ?></td>
-                            <td><img src="<?php echo $row['imagen']; ?>" alt="Imagen" width="50"></td>
+                            <td><img src="../../ups/<?php echo $row['imagen']; ?>" alt="Imagen" width="50"></td>
                             <td><?php echo $row['categoria_id']; ?></td>
                             <td>
-                                <a href="../layout/edit_producto.php?id=<?php echo $row['producto_id']; ?>"
+                                <a href="../layout/edit_producto.php?producto_id=<?php echo $row['producto_id']; ?>"
                                     class="btn btn-warning btn-sm">Editar</a>
-                                <a href="../tools/eliminar_producto.php?id=<?php echo $row['producto_id']; ?>"
+                                <a href="../tools/eliminar_producto.php?producto_id=<?php echo $row['producto_id']; ?>"
                                     class="btn btn-danger btn-sm"
                                     onclick="return confirm('¿Está seguro de que desea eliminar este producto?');">Eliminar</a>
                             </td>

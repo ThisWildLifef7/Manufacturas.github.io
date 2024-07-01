@@ -83,7 +83,7 @@
                         <div class="form-group">
                             <label for="imagen">Imagen de perfil</label>
                             <div class="position-relative">
-                                <img id="preview-img" src="pics/<?php echo $usuario['imagen']; ?>" class="img-thumbnail mt-3 mb-3" alt="">
+                                <img id="preview-img" src="../../usr/<?php echo $usuario['imagen']; ?>" class="img-thumbnail mt-3 mb-3" alt="">
                                 <button type="button" class="btn btn-primary btn-block" onclick="document.getElementById('imagen').click()">Seleccionar archivo</button>
                                 <input type="file" class="custom-file-input" id="imagen" name="imagen" onchange="previewImage()">
                             </div>

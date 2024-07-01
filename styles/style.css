@@ -63,7 +63,7 @@ html {
 .op-found {
   display: flex;
   justify-content: space-between;
-  width: 47rem;
+  width: 40rem;
   font-family: var(--parrafo);
   font-size: 14px;
 }

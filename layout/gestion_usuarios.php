@@ -3,7 +3,7 @@ session_start();
 require ('../php/conexion.php');
 
 // Obtener todos los usuarios de la base de datos
-$sql = "SELECT * FROM usuarios";
+$sql = "SELECT usuario_id, nombre_usuario, nombre_completo, correo, telefono, direccion, tipo_usuario, imagen FROM usuarios";
 $result = $conn->query($sql);
 
 //Verificar si hay un mensaje en la URL
@@ -65,7 +65,7 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
                             <td><?php echo $row['telefono']; ?></td>
                             <td><?php echo $row['direccion']; ?></td>
                             <td><?php echo $row['tipo_usuario']; ?></td>
-                            <td><img src="<?php echo $row['imagen']; ?>" alt="Imagen" width="50"></td>
+                            <td><img src="../../usr/<?php echo $row['imagen']; ?>" alt="Imagen" width="50"></td>
                             <td>
                                 <a href="../layout/edit_usuario.php?id=<?php echo $row['usuario_id']; ?>"
                                     class="btn btn-warning btn-sm">Editar</a>

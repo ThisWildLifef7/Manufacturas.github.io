@@ -20,7 +20,7 @@ $usuario = $result->fetch_assoc();
 
 // Verificar la ruta de la imagen
 $imagen_perfil = $usuario['imagen'];
-$imagen_path = "pics/" . $imagen_perfil; 
+$imagen_path = "../../usr/" . $imagen_perfil; 
 // Ajusta esta ruta según la estructura de tu proyecto y nombre de directorio
 
 ?>
